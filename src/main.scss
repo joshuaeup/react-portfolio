@@ -1,0 +1,80 @@
+@import "./scss/_navigation";
+@import "./scss/_grid";
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+#Main {
+    margin: 3rem 0;
+    padding: 0 2rem;
+}
+
+.title-container {
+    height: 5vh;
+    // background-color: red;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    margin: 0;
+    margin-bottom: 2rem;
+    .title-container__title {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        justify-content: space-between;
+        width: 100%;
+
+        .title-container__title__line {
+            padding: 0 1rem;
+            width: 100%;
+            border: solid 1px #dcdbdb;
+        }
+
+        span {
+            margin: 0 1rem;
+        }
+    }
+}
+
+.border-line {
+    width: 100%;
+    border: solid 1px #dcdbdb;
+    margin: 2rem 0;
+}
+
+@media screen and (min-width: 500px) {
+    #Main {
+        margin: 3rem 0;
+        padding: 0 15rem;
+    }
+
+    .title-container {
+        height: 5vh;
+        width: 100%;
+        display: grid;
+        align-content: center;
+        .title-container__title {
+            display: grid;
+            margin: 0;
+            font-size: 2rem;
+            grid-template-columns: repeat(3, 1fr);
+            width: 100%;
+
+            span {
+                margin: 0 2rem;
+            }
+
+            .title-container__title__line {
+                padding: 0 1rem;
+                width: 100%;
+                border: solid 1px #dcdbdb;
+            }
+        }
+    }
+}
