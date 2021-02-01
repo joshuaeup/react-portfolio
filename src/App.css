@@ -1,21 +1,48 @@
-#Navigation {
-  margin: 0;
-  padding: 0;
-  background-color: #3a3a3a;
-  color: #ffffff;
+#Aside-banner {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-  line-height: 3rem;
-}
-#Navigation :hover {
-  cursor: pointer;
-  background-color: #545454;
-}
-#Navigation .Navigation-item {
   justify-content: center;
+  padding: 2rem 0;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://images.all-free-download.com/images/graphicthumb/the_snow_mountain_which_burns_514266.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+#Aside-banner #Aside-banner__img {
+  height: auto;
+  width: 5vw;
+  border-radius: 50%;
+  justify-self: center;
+}
+#Aside-banner #Aside-banner__title {
+  margin: 0;
+  margin-top: 1rem;
   text-align: center;
+  color: white;
+}
+
+#Navigation {
+  display: grid;
+  grid-template-columns: 1fr;
+  width: auto;
+}
+#Navigation ul {
+  padding: 0;
+  margin: 0;
+}
+#Navigation ul :hover {
+  cursor: pointer;
+  background-color: #4a515a;
+}
+#Navigation ul .Navigation-item {
+  justify-content: start;
+  text-align: left;
   list-style: none;
-  font-size: 0.9rem;
+  font-size: 1em;
+  padding: 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.075);
+}
+#Navigation ul .Navigation-item span {
+  margin-left: 0.5rem;
 }
 
 @media screen and (min-width: 500px) {
@@ -23,9 +50,25 @@
     font-size: 1.1rem;
   }
 }
+#body-two-column-grid {
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+}
+#body-two-column-grid aside {
+  background-color: #33383e;
+  color: #ffffff;
+  position: sticky;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
 .two-column-grid {
   display: flex;
   flex-direction: column-reverse;
+  margin: 2rem 0;
 }
 .two-column-grid .two-column-grid__column {
   height: auto;
@@ -192,10 +235,129 @@
   text-align: center;
 }
 
+.two-grid-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 2rem;
+}
+.two-grid-container .contact-grid-container__title {
+  text-align: left;
+  font-size: 3rem;
+}
+
+.contact-column {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 1rem;
+  grid-auto-rows: min-content;
+  margin-bottom: 1rem;
+}
+.contact-column .contact-column__link__container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-auto-rows: min-content;
+}
+.contact-column .contact-column__link__container :nth-child(2) {
+  color: white;
+}
+.contact-column .contact-column__link__container .contact-column__link {
+  color: white;
+  padding: 0;
+  margin: 0;
+  border-radius: 15px;
+}
+.contact-column .contact-column__link__container .contact-column__link .text__wrapper {
+  border-radius: 12px;
+  font-size: 1.1rem;
+  background-color: white;
+  color: black;
+}
+.contact-column .contact-column__link__container .radio-overlay:hover,
+.contact-column .contact-column__link__container .input[type=radio]:checked ~ .radio-overlay {
+  border: solid 2px #356bff;
+}
+.contact-column .input-container {
+  display: block;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-auto-columns: 5px;
+  margin-bottom: 1rem;
+}
+.contact-column .input-container .input-container__label {
+  margin: 0.5rem 0;
+  margin-top: 0;
+  font-size: 1.2rem;
+}
+.contact-column .input-container .input-container__field {
+  padding: 0.7rem 1rem;
+  border: solid 1px #ced4da;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+.contact-column .input-container #submit {
+  background-color: #04559b;
+  color: white;
+}
+
+.input-radio__container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-auto-rows: min-content;
+  font-size: 0.8rem;
+}
+
+.input-radio {
+  background-color: white;
+  border: solid 2px #d6d6d6;
+  margin: 1rem 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  font-size: 1.2rem;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.input-radio .text__wrapper {
+  padding: 1rem 1rem 0 1rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  text-align: center;
+  position: relative;
+  font-size: 1.3rem;
+  font-weight: 500;
+}
+.input-radio .input {
+  visibility: hidden;
+}
+.input-radio .radio-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  cursor: pointer;
+}
+
+.radio-overlay:hover,
+.input[type=radio]:checked ~ .radio-overlay {
+  border: solid 2px #356bff;
+  border-radius: 10px;
+}
+
 @media screen and (min-width: 1000px) {
+  .two-grid-container {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-gap: 2rem;
+  }
+  .two-grid-container .contact-grid-container__title {
+    text-align: left;
+    font-size: 3rem;
+  }
+
   .two-column-grid {
     flex-direction: row;
-    padding: 0 6rem;
+    padding: 0 4rem;
     align-items: center;
   }
   .two-column-grid .two-column-grid__column .two-column-grid__column__list {
@@ -225,7 +387,7 @@
     display: grid;
     grid-gap: 1rem;
     grid-template-columns: repeat(6, 1fr);
-    padding: 1rem 6rem;
+    padding: 1rem 4rem;
   }
   .six-column-grid .six-column-grid__social-link__container {
     height: 10vh;
@@ -318,7 +480,6 @@ body {
 }
 
 #Main {
-  margin: 3rem 0;
   padding: 0 2rem;
 }
 
@@ -352,11 +513,6 @@ body {
 }
 
 @media screen and (min-width: 500px) {
-  #Main {
-    margin: 3rem 0;
-    padding: 0 15rem;
-  }
-
   .title-container {
     height: 5vh;
     width: 100%;

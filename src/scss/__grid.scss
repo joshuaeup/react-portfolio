@@ -1,7 +1,29 @@
+$colors: (
+    background: #33383e,
+    text-color: #ffffff,
+);
+
+#body-two-column-grid {
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+
+    aside {
+        background-color: map-get($map: $colors, $key: background);
+        color: map-get($map: $colors, $key: text-color);
+        position: sticky;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        margin: 0;
+        padding: 0;
+    }
+}
+
 // Two Column Grid
 .two-column-grid {
     display: flex;
     flex-direction: column-reverse;
+    margin: 2rem 0;
 
     .two-column-grid__column {
         height: auto;
@@ -216,13 +238,151 @@
     }
 }
 
+// 2 Column
+.two-grid-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 2rem;
+
+    .contact-grid-container__title {
+        text-align: left;
+        font-size: 3rem;
+    }
+}
+
+.contact-column {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 1rem;
+    grid-auto-rows: min-content;
+    margin-bottom: 1rem;
+
+    .contact-column__link__container {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-auto-rows: min-content;
+
+        :nth-child(1) {
+            // background-color: map-get($map: $backgroundColor, $key: title);
+        }
+        :nth-child(2) {
+            color: white;
+        }
+
+        .contact-column__link {
+            color: white;
+            padding: 0;
+            margin: 0;
+            border-radius: 15px;
+
+            .text__wrapper {
+                border-radius: 12px;
+                font-size: 1.1rem;
+                background-color: white;
+                color: black;
+            }
+        }
+        .radio-overlay {
+        }
+
+        .radio-overlay:hover,
+        .input[type="radio"]:checked ~ .radio-overlay {
+            border: solid 2px #356bff;
+        }
+    }
+
+    .input-container {
+        display: block;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-auto-columns: 5px;
+        margin-bottom: 1rem;
+
+        .input-container__label {
+            margin: 0.5rem 0;
+            margin-top: 0;
+            font-size: 1.2rem;
+        }
+
+        .input-container__field {
+            padding: 0.7rem 1rem;
+            border: solid 1px #ced4da;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+
+        #submit {
+            background-color: #04559b;
+            color: white;
+        }
+    }
+}
+
+// Input fields
+
+.input-radio__container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-rows: min-content;
+    font-size: 0.8rem;
+}
+
+.input-radio {
+    background-color: white;
+    border: solid 2px #d6d6d6;
+    margin: 1rem 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    font-size: 1.2rem;
+    border-radius: 10px;
+    cursor: pointer;
+
+    .text__wrapper {
+        padding: 1rem 1rem 0 1rem;
+        display: grid;
+        grid-template-columns: 1fr;
+        text-align: center;
+        position: relative;
+        font-size: 1.3rem;
+        font-weight: 500;
+    }
+    .input {
+        visibility: hidden;
+    }
+
+    .radio-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        margin: 0;
+        cursor: pointer;
+    }
+}
+.radio-overlay:hover,
+.input[type="radio"]:checked ~ .radio-overlay {
+    border: solid 2px #356bff;
+    border-radius: 10px;
+}
+
 // Media Quires
 
 @media screen and (min-width: 1000px) {
+    .two-grid-container {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        grid-gap: 2rem;
+
+        .contact-grid-container__title {
+            text-align: left;
+            font-size: 3rem;
+        }
+    }
     // Two Column Grid
     .two-column-grid {
         flex-direction: row;
-        padding: 0 6rem;
+        padding: 0 4rem;
         align-items: center;
 
         .two-column-grid__column {
@@ -263,7 +423,7 @@
         display: grid;
         grid-gap: 1rem;
         grid-template-columns: repeat(6, 1fr);
-        padding: 1rem 6rem;
+        padding: 1rem 4rem;
         // grid-auto-columns: min-content;
 
         .six-column-grid__social-link__container {

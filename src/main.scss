@@ -12,7 +12,6 @@ body {
 }
 
 #Main {
-    margin: 3rem 0;
     padding: 0 2rem;
 }
 
@@ -50,8 +49,7 @@ body {
 
 @media screen and (min-width: 500px) {
     #Main {
-        margin: 3rem 0;
-        padding: 0 15rem;
+        // padding: 0 5rem;
     }
 
     .title-container {
@@ -76,5 +74,23 @@ body {
                 border: solid 1px #dcdbdb;
             }
         }
+    }
+}
+
+@media screen and (min-width: 800px) {
+    #Main {
+        // padding: 0 8rem;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    #Main {
+        // padding: 0 10rem;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    #Main {
+        // padding: 0 15rem;
     }
 }

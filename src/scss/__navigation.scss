@@ -1,30 +1,63 @@
 $colors: (
-    background: #3a3a3a,
+    background: #33383e,
     text-color: #ffffff,
 );
 
-#Navigation {
-    margin: 0;
-    padding: 0;
-    background-color: map-get($map: $colors, $key: background);
-    color: map-get($map: $colors, $key: text-color);
+#Aside-banner {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    line-height: 3rem;
-
-    :hover {
-        cursor: pointer;
-        background-color: lighten(
-            map-get($map: $colors, $key: background),
-            10%
-        );
+    justify-content: center;
+    padding: 2rem 0;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url("https://images.all-free-download.com/images/graphicthumb/the_snow_mountain_which_burns_514266.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    #Aside-banner__img {
+        height: auto;
+        width: 5vw;
+        border-radius: 50%;
+        justify-self: center;
     }
 
-    .Navigation-item {
-        justify-content: center;
+    #Aside-banner__title {
+        margin: 0;
+        margin-top: 1rem;
         text-align: center;
-        list-style: none;
-        font-size: 0.9rem;
+        color: white;
+    }
+}
+
+#Navigation {
+    display: grid;
+    grid-template-columns: 1fr;
+    width: auto;
+
+    ul {
+        padding: 0;
+        margin: 0;
+
+        :hover {
+            cursor: pointer;
+            background-color: lighten(
+                map-get($map: $colors, $key: background),
+                10%
+            );
+        }
+
+        .Navigation-item {
+            justify-content: start;
+            text-align: left;
+            list-style: none;
+            font-size: 1em;
+            padding: 1rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.075);
+
+            i {
+            }
+            span {
+                margin-left: 0.5rem;
+            }
+        }
     }
 }
 
