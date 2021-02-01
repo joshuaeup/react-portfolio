@@ -144,117 +144,119 @@
   width: 100%;
 }
 
-#portfolio-container {
-  background-color: red;
+#projects-container {
+  background-color: #ffffff;
 }
-#portfolio-container .portfolio-column-grid {
+#projects-container .portfolio-column-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   grid-gap: 3rem;
   padding: 0;
 }
-#portfolio-container .portfolio-column-grid .portfolio-column-grid__column {
+#projects-container .portfolio-column-grid .portfolio-column-grid__column {
   box-shadow: inset 0 -3em 3em rgba(0, 0, 0, 0.1), 0 0 0 2px #fff, 0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
   border: solid 1px white;
   padding: 0.8rem;
   background-color: #ececec;
 }
-#portfolio-container .portfolio-column-grid .portfolio-column-grid__column .portfolio-column-grid__column__img__container .portfolio-column-grid__column__img {
+#projects-container .portfolio-column-grid .portfolio-column-grid__column .portfolio-column-grid__column__img__container .portfolio-column-grid__column__img {
   height: 100%;
   width: 100%;
 }
-.skills-container {
+#skills-container__outer {
+  background-color: #fafafa;
+}
+#skills-container__outer .skills-container {
   padding: 2rem;
   box-shadow: 0 0 0 2px #fff, 0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
   border: solid 1px white;
   font-size: 1.5rem;
   margin: 0 4rem;
 }
-.skills-container .skills-container__title__container {
+#skills-container__outer .skills-container .skills-container__title__container {
   display: grid;
   grid-template-columns: 1fr;
   justify-content: center;
 }
-.skills-container .skills-container__title__container .skills-container__title__container__title {
+#skills-container__outer .skills-container .skills-container__title__container .skills-container__title__container__title {
   text-align: center;
   margin: 0;
 }
-.skills-container .skills-container__title__container :nth-child(2) {
+#skills-container__outer .skills-container .skills-container__title__container :nth-child(2) {
   align-self: center;
   text-align: center;
   font-size: 2.5rem;
   margin-top: 2rem;
 }
-.skills-container .skills-container__title__container .skills-container__title__container__img__container .skills-container__title__container__img {
+#skills-container__outer .skills-container .skills-container__title__container .skills-container__title__container__img__container .skills-container__title__container__img {
   height: 100%;
   width: 100%;
 }
-.skills-container .skills-container__grid {
+#skills-container__outer .skills-container .skills-container__grid {
   display: grid;
   grid-template-columns: 1fr;
 }
-.skills-container .skills-container__grid .skills-container__grid__item {
+#skills-container__outer .skills-container .skills-container__grid .skills-container__grid__item {
   height: auto;
 }
-.skills-container .skills-container__grid .skills-container__grid__item .skills-container__grid__item__container__img__container {
+#skills-container__outer .skills-container .skills-container__grid .skills-container__grid__item .skills-container__grid__item__container__img__container {
   display: flex;
   max-height: 10rem;
 }
-.skills-container .skills-container__grid .skills-container__grid__item .skills-container__grid__item__container__img__container .skills-container__grid__item__container__img {
+#skills-container__outer .skills-container .skills-container__grid .skills-container__grid__item .skills-container__grid__item__container__img__container .skills-container__grid__item__container__img {
   max-height: 10rem;
   margin: auto;
   border-radius: 5%;
 }
-.skills-container .skills-container__grid .skills-container__grid__item .skills-container__grid__item__container__text__container {
+#skills-container__outer .skills-container .skills-container__grid .skills-container__grid__item .skills-container__grid__item__container__text__container {
   height: auto;
 }
-.skills-container .skills-container__grid .skills-container__grid__item .skills-container__grid__item__container__text__container .skills-container__grid__item__container__text {
+#skills-container__outer .skills-container .skills-container__grid .skills-container__grid__item .skills-container__grid__item__container__text__container .skills-container__grid__item__container__text {
   text-align: center;
 }
-
-.skills-container {
+#skills-container__outer .skills-container {
   margin-bottom: 6rem;
   padding: 2rem;
   box-shadow: 0 0 0 2px #fff, 0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
   border: solid 1px white;
   font-size: 1.5rem;
 }
-.skills-container .skills-container__title__container {
+#skills-container__outer .skills-container .skills-container__title__container {
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
-.skills-container .skills-container__title__container .skills-container__title__container__title {
+#skills-container__outer .skills-container .skills-container__title__container .skills-container__title__container__title {
   margin: 0;
 }
-.skills-container .skills-container__title__container :nth-child(2) {
+#skills-container__outer .skills-container .skills-container__title__container :nth-child(2) {
   align-self: center;
   justify-self: end;
   font-size: 2.5rem;
   margin: 0;
 }
-.skills-container .skills-container__title__container .skills-container__title__container__img__container .skills-container__title__container__img {
+#skills-container__outer .skills-container .skills-container__title__container .skills-container__title__container__img__container .skills-container__title__container__img {
   height: 100%;
   width: 100%;
 }
-.skills-container .skills-container__grid {
+#skills-container__outer .skills-container .skills-container__grid {
   display: grid;
   grid-template-columns: 1fr;
 }
-.skills-container .skills-container__grid .skills-container__grid__item {
+#skills-container__outer .skills-container .skills-container__grid .skills-container__grid__item {
   height: auto;
 }
-.skills-container .skills-container__grid .skills-container__grid__item .skills-container__grid__item__container__img__container {
+#skills-container__outer .skills-container .skills-container__grid .skills-container__grid__item .skills-container__grid__item__container__img__container {
   display: flex;
   max-height: 10rem;
 }
-.skills-container .skills-container__grid .skills-container__grid__item .skills-container__grid__item__container__img__container .skills-container__grid__item__container__img {
+#skills-container__outer .skills-container .skills-container__grid .skills-container__grid__item .skills-container__grid__item__container__img__container .skills-container__grid__item__container__img {
   max-height: 10rem;
   margin: auto;
 }
-.skills-container .skills-container__grid .skills-container__grid__item .skills-container__grid__item__container__text__container {
+#skills-container__outer .skills-container .skills-container__grid .skills-container__grid__item .skills-container__grid__item__container__text__container {
   height: auto;
 }
-.skills-container .skills-container__grid .skills-container__grid__item .skills-container__grid__item__container__text__container .skills-container__grid__item__container__text {
+#skills-container__outer .skills-container .skills-container__grid .skills-container__grid__item .skills-container__grid__item__container__text__container .skills-container__grid__item__container__text {
   text-align: center;
 }
 
@@ -452,67 +454,67 @@
     border: solid 4px whitesmoke;
   }
 
-  .portfolio-column-grid {
+  #projects-container .portfolio-column-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     grid-gap: 3rem;
     padding: 2rem 4rem;
   }
-  .portfolio-column-grid .portfolio-column-grid__column {
+  #projects-container .portfolio-column-grid .portfolio-column-grid__column {
     border: solid 1px white;
     padding: 0.8rem;
     background-color: #fffefe;
     box-shadow: inset 0 -3em 3em rgba(0, 0, 0, 0.1), 0 0 0 2px #fff, 0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
   }
-  .portfolio-column-grid .portfolio-column-grid__column .portfolio-column-grid__column__img__container .portfolio-column-grid__column__img {
+  #projects-container .portfolio-column-grid .portfolio-column-grid__column .portfolio-column-grid__column__img__container .portfolio-column-grid__column__img {
     height: 100%;
     width: 100%;
   }
-  .skills-container {
+  #skills-container__outer .skills-container {
     display: grid;
     padding: 2rem;
     box-shadow: 0 0 0 2px #fff, 0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
     border: solid 1px white;
     font-size: 1.5rem;
   }
-  .skills-container .skills-container__title__container {
+  #skills-container__outer .skills-container .skills-container__title__container {
     display: grid;
     grid-template-columns: 1fr 1fr;
   }
-  .skills-container .skills-container__title__container .skills-container__title__container__title {
+  #skills-container__outer .skills-container .skills-container__title__container .skills-container__title__container__title {
     justify-self: left;
     margin: 0;
   }
-  .skills-container .skills-container__title__container :nth-child(2) {
+  #skills-container__outer .skills-container .skills-container__title__container :nth-child(2) {
     align-self: center;
     justify-self: end;
     font-size: 2.5rem;
     margin: 0;
   }
-  .skills-container .skills-container__title__container .skills-container__title__container__img__container .skills-container__title__container__img {
+  #skills-container__outer .skills-container .skills-container__title__container .skills-container__title__container__img__container .skills-container__title__container__img {
     height: 100%;
     width: 100%;
   }
-  .skills-container .skills-container__grid {
+  #skills-container__outer .skills-container .skills-container__grid {
     display: grid;
     grid-gap: 3rem;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   }
-  .skills-container .skills-container__grid .skills-container__grid__item {
+  #skills-container__outer .skills-container .skills-container__grid .skills-container__grid__item {
     height: auto;
   }
-  .skills-container .skills-container__grid .skills-container__grid__item .skills-container__grid__item__container__img__container {
+  #skills-container__outer .skills-container .skills-container__grid .skills-container__grid__item .skills-container__grid__item__container__img__container {
     display: flex;
     max-height: 10rem;
   }
-  .skills-container .skills-container__grid .skills-container__grid__item .skills-container__grid__item__container__img__container .skills-container__grid__item__container__img {
+  #skills-container__outer .skills-container .skills-container__grid .skills-container__grid__item .skills-container__grid__item__container__img__container .skills-container__grid__item__container__img {
     max-height: 10rem;
     margin: auto;
   }
-  .skills-container .skills-container__grid .skills-container__grid__item .skills-container__grid__item__container__text__container {
+  #skills-container__outer .skills-container .skills-container__grid .skills-container__grid__item .skills-container__grid__item__container__text__container {
     height: auto;
   }
-  .skills-container .skills-container__grid .skills-container__grid__item .skills-container__grid__item__container__text__container .skills-container__grid__item__container__text {
+  #skills-container__outer .skills-container .skills-container__grid .skills-container__grid__item .skills-container__grid__item__container__text__container .skills-container__grid__item__container__text {
     text-align: center;
   }
 }
