@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;1,300&display=swap");
 #Aside-banner {
   display: grid;
   justify-content: center;
@@ -53,10 +54,10 @@
 #open-toggle {
   display: block;
   position: fixed;
-  top: 2rem;
+  top: 1.5rem;
   left: 2rem;
   z-index: 5;
-  color: black;
+  color: white;
   font-size: 1.5rem;
 }
 
@@ -84,6 +85,9 @@
 .two-column-grid .two-column-grid__column {
   height: auto;
   width: 100%;
+}
+.two-column-grid .two-column-grid__column .two-column-grid__column__body {
+  font-size: 1.2rem;
 }
 .two-column-grid .two-column-grid__column .two-column-grid__column__list {
   color: #04559b;
@@ -398,6 +402,7 @@
     align-items: center;
   }
   .two-column-grid .two-column-grid__column .two-column-grid__column__list {
+    width: 50%;
     justify-items: start;
   }
   .two-column-grid .two-column-grid__column .two-column-grid__column__list .two-column-grid__column__list__item i {
@@ -570,10 +575,39 @@ html,
 body {
   margin: 0;
   padding: 0;
+  font-family: "Roboto", sans-serif;
 }
 
 #Main {
   padding: 0;
+}
+
+#top-banner {
+  background: #33383eea;
+  display: grid;
+  align-content: center;
+  margin: 0;
+  width: 100%;
+  padding: 0 10rem;
+}
+#top-banner #top-banner__title {
+  margin: 0;
+  padding: 1rem 0;
+  color: white;
+  text-align: center;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: space-between;
+  width: 100%;
+}
+#top-banner #top-banner__title .title-container__title__line {
+  padding: 0 1rem;
+  width: 100%;
+  border: solid 1px #dcdbdb;
+  background-color: white;
+}
+#top-banner #top-banner__title span {
+  margin: 0 1rem;
 }
 
 .title-container {

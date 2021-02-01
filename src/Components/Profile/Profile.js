@@ -10,15 +10,12 @@ const Profile = (props) => {
                         I'm a _____ Developer
                     </h3>
                     <p className="two-column-grid__column__body">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                        sed do eiusmod tempor incididunt ut labore et dolore
-                        magna aliqua. Ut enim ad minim veniam, quis nostrud
-                        exercitation ullamco laboris nisi ut aliquip ex ea
-                        commodo consequat. Duis aute irure dolor in
-                        reprehenderit in voluptate velit esse cillum dolore eu
-                        fugiat nulla pariatur. Excepteur sint occaecat cupidatat
-                        non proident, sunt in culpa qui officia deserunt mollit
-                        anim id est laborum.
+                        With a passion for using my technical skills to
+                        introduce innovative methods to meet objectives. My role
+                        is to build industry-standard websites and web
+                        applications. I'm driven to always remain curious, and
+                        expand my knowledge every chance I have.
+                        AlwaysLearning();
                     </p>
                     <ul className="two-column-grid__column__list">
                         <li className="two-column-grid__column__list__item">

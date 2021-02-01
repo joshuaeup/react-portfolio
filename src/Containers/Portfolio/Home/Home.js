@@ -9,6 +9,13 @@ import Footer from "../../../Components/Footer/Footer";
 const Home = (props) => {
     return (
         <div id="Main">
+            <div id="top-banner">
+                <h1 id="top-banner__title">
+                    <hr className="title-container__title__line" />
+                    <span>Portfolio</span>
+                    <hr className="title-container__title__line" />
+                </h1>
+            </div>
             <Profile />
             <hr className="border-line" />
             <Projects />

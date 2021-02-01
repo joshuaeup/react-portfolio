@@ -7,10 +7,10 @@ $colors: (
 #open-toggle {
     display: block;
     position: fixed;
-    top: 2rem;
+    top: 1.5rem;
     left: 2rem;
     z-index: 5;
-    color: black;
+    color: white;
     font-size: 1.5rem;
 }
 
@@ -40,6 +40,10 @@ $colors: (
     .two-column-grid__column {
         height: auto;
         width: 100%;
+
+        .two-column-grid__column__body {
+            font-size: 1.2rem;
+        }
 
         .two-column-grid__column__list {
             // margin: 0;
@@ -426,6 +430,7 @@ $colors: (
 
         .two-column-grid__column {
             .two-column-grid__column__list {
+                width: 50%;
                 justify-items: start;
                 .two-column-grid__column__list__item {
                     i {

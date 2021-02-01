@@ -4,7 +4,7 @@ import Title from "../Title/Title";
 const Projects = (props) => {
     return (
         <>
-            <Title text="Portfolio" />
+            <Title text="Projects" />
             <div className="portfolio-column-grid">
                 <div className="portfolio-column-grid__column">
                     <div className="portfolio-column-grid__column__img__container">
