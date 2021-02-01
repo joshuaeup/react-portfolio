@@ -6,6 +6,7 @@ const Skills = (props) => {
     const [skills] = useState(SkillsData);
     return (
         <>
+            <hr className="border-line" />
             <Title text="Skills" />
             {skills.map((skill, index) => {
                 return (

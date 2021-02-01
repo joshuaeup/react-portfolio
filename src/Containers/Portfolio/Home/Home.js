@@ -17,7 +17,6 @@ const Home = (props) => {
                 </h1>
             </div>
             <Profile />
-            <hr className="border-line" />
             <Projects />
             <hr className="border-line" />
             <Skills />

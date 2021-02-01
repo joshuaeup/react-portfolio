@@ -32,105 +32,113 @@ $colors: (
 }
 
 // Two Column Grid
-.two-column-grid {
-    display: flex;
-    flex-direction: column-reverse;
-    margin: 2rem 4rem;
+#profile-container {
+    background-color: #fafafa;
+    padding: 2rem 4rem;
+    .two-column-grid {
+        display: flex;
+        flex-direction: column-reverse;
+        margin: 0;
 
-    .two-column-grid__column {
-        height: auto;
-        width: 100%;
-
-        .two-column-grid__column__body {
-            font-size: 1.2rem;
-        }
-
-        .two-column-grid__column__list {
-            // margin: 0;
-            color: #04559b;
-            margin: 1rem 0;
-            padding: 0;
-            list-style: none;
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr 1fr;
-            justify-content: center;
+        .two-column-grid__column {
+            height: auto;
             width: 100%;
-            .two-column-grid__column__list__item {
-                font-size: 1.5rem;
-                text-align: center;
+
+            .two-column-grid__column__body {
+                font-size: 1.2rem;
+            }
+
+            .two-column-grid__column__list {
+                // margin: 0;
+                color: #04559b;
+                margin: 1rem 0;
+                padding: 0;
+                list-style: none;
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr 1fr;
+                justify-content: center;
+                width: 100%;
+                .two-column-grid__column__list__item {
+                    font-size: 1.5rem;
+                    text-align: center;
+                }
+            }
+
+            .two-column-grid__column__img__container {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 30vh;
+                width: auto;
+
+                .six-column-grid__social-link__container__link {
+                    height: 100%;
+                    width: 100%;
+                }
+
+                .two-column-grid__column__img {
+                    height: 100%;
+                    width: auto;
+                    border-radius: 10%;
+                }
             }
         }
+    }
 
-        .two-column-grid__column__img__container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 30vh;
-            width: auto;
+    // Six Column Grid
+    .six-column-grid {
+        display: grid;
+        grid-gap: 1rem;
+        grid-template-columns: repeat(3, 1fr);
+        margin: $standard-margin;
 
+        .six-column-grid__social-link__container {
+            height: auto;
+            width: 100%;
+            box-shadow: inset 0 -3em 3em rgba(0, 0, 0, 0.1), 0 0 0 2px #fff,
+                0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
+            border: solid 1px white;
             .six-column-grid__social-link__container__link {
                 height: 100%;
                 width: 100%;
-            }
-
-            .two-column-grid__column__img {
-                height: 100%;
-                width: auto;
-                border-radius: 10%;
+                .six-column-grid__social-link__container__link__img {
+                    height: 100%;
+                    width: 100%;
+                }
             }
         }
     }
 }
 
-// Six Column Grid
-.six-column-grid {
-    display: grid;
-    grid-gap: 1rem;
-    grid-template-columns: repeat(3, 1fr);
-    margin: $standard-margin;
+#portfolio-container {
+    background-color: red;
+    // Portfolio Column Grid
+    .portfolio-column-grid {
+        // background-color: #ffffff;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        grid-gap: 3rem;
+        padding: 0;
+        // margin: $standard-margin;
+        .portfolio-column-grid__column {
+            box-shadow: inset 0 -3em 3em rgba(0, 0, 0, 0.1), 0 0 0 2px #fff,
+                0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
+            border: solid 1px white;
+            padding: 0.8rem;
+            background-color: #ececec;
 
-    .six-column-grid__social-link__container {
-        height: auto;
-        width: 100%;
-        box-shadow: inset 0 -3em 3em rgba(0, 0, 0, 0.1), 0 0 0 2px #fff,
-            0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
-        border: solid 1px white;
-        .six-column-grid__social-link__container__link {
-            height: 100%;
-            width: 100%;
-            .six-column-grid__social-link__container__link__img {
-                height: 100%;
-                width: 100%;
+            .portfolio-column-grid__column__img__container {
+                .portfolio-column-grid__column__img {
+                    height: 100%;
+                    width: 100%;
+                }
             }
-        }
-    }
-}
 
-// Portfolio Column Grid
-.portfolio-column-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    grid-gap: 3rem;
-    padding: 0;
-    margin: $standard-margin;
-    .portfolio-column-grid__column {
-        box-shadow: inset 0 -3em 3em rgba(0, 0, 0, 0.1), 0 0 0 2px #fff,
-            0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
-        border: solid 1px white;
-        padding: 0.8rem;
-        background-color: #ececec;
-
-        .portfolio-column-grid__column__img__container {
-            .portfolio-column-grid__column__img {
-                height: 100%;
-                width: 100%;
-            }
-        }
-
-        .portfolio-column-grid__column__info {
-            .portfolio-column-grid__column__info__title {
-            }
-            .portfolio-column-grid__column__info__text {
+            .portfolio-column-grid__column__info {
+                .portfolio-column-grid__column__info__title {
+                }
+                .portfolio-column-grid__column__info__text {
+                }
             }
         }
     }
@@ -422,73 +430,76 @@ $colors: (
             font-size: 3rem;
         }
     }
-    // Two Column Grid
-    .two-column-grid {
-        flex-direction: row;
-        padding: $standard-margin;
-        align-items: center;
+    #profile-container {
+        padding: 7rem 4rem;
+        // Two Column Grid
+        .two-column-grid {
+            flex-direction: row;
+            padding: $standard-margin;
+            align-items: center;
 
-        .two-column-grid__column {
-            .two-column-grid__column__list {
-                width: 50%;
-                justify-items: start;
-                .two-column-grid__column__list__item {
-                    i {
-                        font-size: 1.3rem;
+            .two-column-grid__column {
+                .two-column-grid__column__list {
+                    width: 50%;
+                    justify-items: start;
+                    .two-column-grid__column__list__item {
+                        i {
+                            font-size: 1.3rem;
+                        }
+                    }
+                }
+
+                .two-column-grid__column__img__container {
+                    height: 30vh;
+                    width: auto;
+                    // justify-content: flex-end;
+
+                    .two-column-grid__column__img {
+                        height: 100%;
+                        width: auto;
                     }
                 }
             }
-
-            .two-column-grid__column__img__container {
-                height: 30vh;
-                width: auto;
-                // justify-content: flex-end;
-
-                .two-column-grid__column__img {
-                    height: 100%;
-                    width: auto;
-                }
-            }
         }
-    }
 
-    .two-column-grid__column:nth-child(1) {
-        justify-self: start;
-        // padding: 1rem 4rem 1rem 1rem;
-    }
+        .two-column-grid__column:nth-child(1) {
+            justify-self: start;
+            // padding: 1rem 4rem 1rem 1rem;
+        }
 
-    .two-column-grid__column:nth-child(2) {
-        justify-self: end;
-        // width: 50%;
-    }
+        .two-column-grid__column:nth-child(2) {
+            justify-self: end;
+            // width: 50%;
+        }
 
-    // Six Column Grid
-    .six-column-grid {
-        display: grid;
-        grid-gap: 1rem;
-        grid-template-columns: repeat(6, 1fr);
-        padding: 1rem 4rem;
-        // grid-auto-columns: min-content;
+        // Six Column Grid
+        .six-column-grid {
+            display: grid;
+            grid-gap: 1rem;
+            grid-template-columns: repeat(6, 1fr);
+            padding: 1rem 0;
+            // grid-auto-columns: min-content;
 
-        .six-column-grid__social-link__container {
-            height: 10vh;
-            width: 7vw;
+            .six-column-grid__social-link__container {
+                height: 10vh;
+                width: 7vw;
 
-            .six-column-grid__social-link__container__link {
-                // margin-top: 2rem;
-                // height: 10vh;
-                height: 100%;
-                width: 100%;
-                display: grid;
-                // grid-auto-columns: min-content;
-
-                .six-column-grid__social-link__container__link__img {
-                    justify-self: start;
-                    // max-height: 8vh;
-                    // width: auto;
+                .six-column-grid__social-link__container__link {
+                    // margin-top: 2rem;
+                    // height: 10vh;
                     height: 100%;
                     width: 100%;
-                    border: solid 4px whitesmoke;
+                    display: grid;
+                    // grid-auto-columns: min-content;
+
+                    .six-column-grid__social-link__container__link__img {
+                        justify-self: start;
+                        // max-height: 8vh;
+                        // width: auto;
+                        height: 100%;
+                        width: 100%;
+                        border: solid 4px whitesmoke;
+                    }
                 }
             }
         }
@@ -499,7 +510,7 @@ $colors: (
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
         grid-gap: 3rem;
-        padding: 0;
+        padding: 2rem 4rem;
         .portfolio-column-grid__column {
             border: solid 1px white;
             padding: 0.8rem;
