@@ -1,13 +1,25 @@
+$standard-margin: 0 4rem;
 $colors: (
     background: #33383e,
     text-color: #ffffff,
 );
 
+#open-toggle {
+    display: block;
+    position: fixed;
+    top: 2rem;
+    left: 2rem;
+    z-index: 5;
+    color: black;
+    font-size: 1.5rem;
+}
+
 #body-two-column-grid {
     display: grid;
-    grid-template-columns: 1fr 5fr;
+    grid-template-columns: 1fr;
 
     aside {
+        display: none;
         background-color: map-get($map: $colors, $key: background);
         color: map-get($map: $colors, $key: text-color);
         position: sticky;
@@ -23,7 +35,7 @@ $colors: (
 .two-column-grid {
     display: flex;
     flex-direction: column-reverse;
-    margin: 2rem 0;
+    margin: 2rem 4rem;
 
     .two-column-grid__column {
         height: auto;
@@ -71,6 +83,7 @@ $colors: (
     display: grid;
     grid-gap: 1rem;
     grid-template-columns: repeat(3, 1fr);
+    margin: $standard-margin;
 
     .six-column-grid__social-link__container {
         height: auto;
@@ -95,6 +108,7 @@ $colors: (
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     grid-gap: 3rem;
     padding: 0;
+    margin: $standard-margin;
     .portfolio-column-grid__column {
         box-shadow: inset 0 -3em 3em rgba(0, 0, 0, 0.1), 0 0 0 2px #fff,
             0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
@@ -120,11 +134,11 @@ $colors: (
 
 // Skills Column Grid
 .skills-container {
-    // display: grid;
     padding: 2rem;
     box-shadow: 0 0 0 2px #fff, 0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
     border: solid 1px white;
     font-size: 1.5rem;
+    margin: $standard-margin;
 
     .skills-container__title__container {
         display: grid;
@@ -236,6 +250,10 @@ $colors: (
             }
         }
     }
+}
+
+#padded-main {
+    margin: $standard-margin;
 }
 
 // 2 Column
@@ -368,7 +386,28 @@ $colors: (
 
 // Media Quires
 
+@media screen and (min-width: 700px) {
+    #open-toggle {
+        display: none;
+    }
+
+    #body-two-column-grid {
+        grid-template-columns: 1fr 3fr;
+
+        aside {
+            display: block;
+        }
+    }
+}
+
 @media screen and (min-width: 1000px) {
+    #body-two-column-grid {
+        grid-template-columns: 1fr 3fr;
+
+        aside {
+            display: block;
+        }
+    }
     .two-grid-container {
         display: grid;
         grid-template-columns: 1fr 2fr;
@@ -382,7 +421,7 @@ $colors: (
     // Two Column Grid
     .two-column-grid {
         flex-direction: row;
-        padding: 0 4rem;
+        padding: $standard-margin;
         align-items: center;
 
         .two-column-grid__column {
@@ -535,6 +574,16 @@ $colors: (
                     }
                 }
             }
+        }
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    #body-two-column-grid {
+        grid-template-columns: 1fr 5fr;
+
+        aside {
+            display: block;
         }
     }
 }

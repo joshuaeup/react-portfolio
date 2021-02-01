@@ -1,5 +1,6 @@
 @import "./scss/_navigation";
 @import "./scss/_grid";
+@import "./scss/_footer";
 
 * {
     box-sizing: border-box;
@@ -12,7 +13,7 @@ body {
 }
 
 #Main {
-    padding: 0 2rem;
+    padding: 0;
 }
 
 .title-container {
