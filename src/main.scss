@@ -1,7 +1,8 @@
 @import "./scss/_navigation";
 @import "./scss/_grid";
 @import "./scss/_footer";
-@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;1,300&display=swap");
+@import "./scss/_loader";
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,900;1,300&display=swap");
 
 * {
     box-sizing: border-box;

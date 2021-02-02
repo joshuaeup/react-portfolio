@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;1,300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,900;1,300&display=swap");
 #Aside-banner {
   display: grid;
   justify-content: center;
@@ -574,6 +574,45 @@
   margin: 0;
 }
 
+#loader-container {
+  height: 100vh;
+  width: 100vw;
+  background-color: #68cbe3;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+#loader-container #loader__title {
+  color: white;
+  text-transform: uppercase;
+  font-size: 3rem;
+  font-weight: 900;
+  margin: 0;
+  margin-bottom: 1rem;
+}
+#loader-container #loader {
+  border: 16px solid transparent;
+  border-radius: 50%;
+  border-top: 16px solid white;
+  width: 120px;
+  height: 120px;
+  animation: spin infinite linear 1s;
+  margin: auto;
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@media screen and (min-width: 700px) {
+  #loader-container #loader__title {
+    font-size: 8rem;
+  }
+}
 * {
   box-sizing: border-box;
 }
