@@ -14,16 +14,16 @@ const Portfolio = () => {
     });
     return (
         <>
-            {loading === false ? (
-                <>
-                    <i id="open-toggle" className="fas fa-bars "></i>
-                    <div id="body-two-column-grid">
-                        <aside>
-                            <Navigation />
-                        </aside>
-                        <Route to="/" render={() => <Home />} />
-                    </div>
-                </>
+            {/* {loading === false ? (
+                <> */}
+            <i id="open-toggle" className="fas fa-bars "></i>
+            <div id="body-two-column-grid">
+                <aside>
+                    <Navigation />
+                </aside>
+                <Route to="/" render={() => <Home />} />
+            </div>
+            {/* </>
             ) : (
                 <div id="loader-container">
                     <div>
@@ -31,7 +31,7 @@ const Portfolio = () => {
                         <div id="loader"></div>
                     </div>
                 </div>
-            )}
+            )} */}
         </>
     );
 };
