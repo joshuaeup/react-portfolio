@@ -29,20 +29,20 @@ const Portfolio = () => {
     };
     return (
         <>
-            {/* {loading === false ? (
-                <> */}
-            <i
-                id="open-toggle"
-                className="fas fa-bars "
-                onClick={toggleHandler}
-            ></i>
-            <div id="body-two-column-grid">
-                <aside className={toggleClass}>
-                    <Navigation toggle={toggleHandler} />
-                </aside>
-                <Route to="/" render={() => <Home />} />
-            </div>
-            {/* </>
+            {loading === false ? (
+                <>
+                    <i
+                        id="open-toggle"
+                        className="fas fa-bars "
+                        onClick={toggleHandler}
+                    ></i>
+                    <div id="body-two-column-grid">
+                        <aside className={toggleClass}>
+                            <Navigation toggle={toggleHandler} />
+                        </aside>
+                        <Route to="/" render={() => <Home />} />
+                    </div>
+                </>
             ) : (
                 <div id="loader-container">
                     <div>
@@ -50,7 +50,7 @@ const Portfolio = () => {
                         <div id="loader"></div>
                     </div>
                 </div>
-            )} */}
+            )}
         </>
     );
 };
