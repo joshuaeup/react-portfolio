@@ -9,12 +9,13 @@ $colors: (
     position: fixed;
     top: 1.5rem;
     left: 2rem;
-    z-index: 5;
+    z-index: 20;
     color: white;
     font-size: 1.5rem;
 }
 
 #top-banner {
+    z-index: 15;
     padding: 0;
     #top-banner__title {
         grid-template-columns: 1fr;
@@ -26,6 +27,7 @@ $colors: (
 
 #body-two-column-grid {
     aside {
+        z-index: 15;
         background-color: map-get($map: $colors, $key: background);
         color: map-get($map: $colors, $key: text-color);
         position: fixed;
@@ -47,41 +49,6 @@ $colors: (
 
     .change {
         left: 0;
-    }
-}
-
-@media screen and (min-width: 700px) {
-    #open-toggle {
-        display: none;
-    }
-
-    #top-banner {
-        padding: 0 10rem;
-        #top-banner__title {
-            grid-template-columns: repeat(3, 1fr);
-            .title-container__title__line {
-                display: block;
-            }
-        }
-    }
-
-    #body-two-column-grid {
-        display: grid;
-        grid-template-columns: 1fr 3fr;
-
-        aside {
-            position: sticky;
-            display: block;
-            width: 100%;
-            top: 0;
-            transform: translateX(0);
-
-            #Aside-banner {
-                #Aside-banner__img {
-                    width: 5vw;
-                }
-            }
-        }
     }
 }
 
@@ -144,7 +111,6 @@ $colors: (
         display: grid;
         grid-gap: 1rem;
         grid-template-columns: repeat(3, 1fr);
-        margin: $standard-margin;
 
         .six-column-grid__social-link__container {
             height: auto;
@@ -166,11 +132,12 @@ $colors: (
 
 #projects-container {
     background-color: #ffffff;
+    padding: 2rem 4rem;
     // Portfolio Column Grid
     .portfolio-column-grid {
         // background-color: #ffffff;
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        grid-template-columns: 1fr;
         grid-gap: 3rem;
         padding: 0;
         // margin: $standard-margin;
@@ -272,14 +239,16 @@ $colors: (
 
         .skills-container__title__container {
             display: grid;
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: 1fr;
+            grid-gap: 1rem;
+            margin-bottom: 1rem;
 
             .skills-container__title__container__title {
                 margin: 0;
             }
             :nth-child(2) {
                 align-self: center;
-                justify-self: end;
+                // justify-self: end;
                 font-size: 2.5rem;
                 margin: 0;
             }
@@ -307,6 +276,7 @@ $colors: (
 
                     .skills-container__grid__item__container__img {
                         max-height: 10rem;
+                        width: 100%;
                         margin: auto;
                     }
                 }
@@ -455,6 +425,59 @@ $colors: (
 
 // Media Quires
 
+@media screen and (min-width: 400px) {
+    #skills-container__outer
+        .skills-container
+        .skills-container__grid
+        .skills-container__grid__item
+        .skills-container__grid__item__container__img__container
+        .skills-container__grid__item__container__img {
+        width: auto;
+    }
+}
+
+@media screen and (min-width: 700px) {
+    #open-toggle {
+        display: none;
+    }
+
+    #top-banner {
+        padding: 0 10rem;
+        #top-banner__title {
+            grid-template-columns: repeat(3, 1fr);
+            .title-container__title__line {
+                display: block;
+            }
+        }
+    }
+
+    #body-two-column-grid {
+        display: grid;
+        grid-template-columns: 1fr 3fr;
+
+        aside {
+            position: sticky;
+            display: block;
+            width: 100%;
+            top: 0;
+            transform: translateX(0);
+
+            #Aside-banner {
+                #Aside-banner__img {
+                    width: 5vw;
+                }
+            }
+        }
+    }
+
+    .six-column-grid {
+        display: grid;
+        grid-gap: 1rem;
+        grid-template-columns: repeat(3, 1fr);
+        margin: $standard-margin;
+    }
+}
+
 @media screen and (min-width: 1000px) {
     #body-two-column-grid {
         grid-template-columns: 1fr 3fr;
@@ -590,6 +613,8 @@ $colors: (
             .skills-container__title__container {
                 display: grid;
                 grid-template-columns: 1fr 1fr;
+
+                margin-bottom: 2rem;
 
                 .skills-container__title__container__title {
                     justify-self: left;

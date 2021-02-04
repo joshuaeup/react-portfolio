@@ -56,12 +56,13 @@
   position: fixed;
   top: 1.5rem;
   left: 2rem;
-  z-index: 5;
+  z-index: 20;
   color: white;
   font-size: 1.5rem;
 }
 
 #top-banner {
+  z-index: 15;
   padding: 0;
 }
 #top-banner #top-banner__title {
@@ -72,6 +73,7 @@
 }
 
 #body-two-column-grid aside {
+  z-index: 15;
   background-color: #33383e;
   color: #ffffff;
   position: fixed;
@@ -90,36 +92,6 @@
   left: 0;
 }
 
-@media screen and (min-width: 700px) {
-  #open-toggle {
-    display: none;
-  }
-
-  #top-banner {
-    padding: 0 10rem;
-  }
-  #top-banner #top-banner__title {
-    grid-template-columns: repeat(3, 1fr);
-  }
-  #top-banner #top-banner__title .title-container__title__line {
-    display: block;
-  }
-
-  #body-two-column-grid {
-    display: grid;
-    grid-template-columns: 1fr 3fr;
-  }
-  #body-two-column-grid aside {
-    position: sticky;
-    display: block;
-    width: 100%;
-    top: 0;
-    transform: translateX(0);
-  }
-  #body-two-column-grid aside #Aside-banner #Aside-banner__img {
-    width: 5vw;
-  }
-}
 #profile-container {
   background-color: #fafafa;
   padding: 2rem 4rem;
@@ -170,7 +142,6 @@
   display: grid;
   grid-gap: 1rem;
   grid-template-columns: repeat(3, 1fr);
-  margin: 0 4rem;
 }
 #profile-container .six-column-grid .six-column-grid__social-link__container {
   height: auto;
@@ -189,10 +160,11 @@
 
 #projects-container {
   background-color: #ffffff;
+  padding: 2rem 4rem;
 }
 #projects-container .portfolio-column-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: 1fr;
   grid-gap: 3rem;
   padding: 0;
 }
@@ -266,14 +238,15 @@
 }
 #skills-container__outer .skills-container .skills-container__title__container {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
+  grid-gap: 1rem;
+  margin-bottom: 1rem;
 }
 #skills-container__outer .skills-container .skills-container__title__container .skills-container__title__container__title {
   margin: 0;
 }
 #skills-container__outer .skills-container .skills-container__title__container :nth-child(2) {
   align-self: center;
-  justify-self: end;
   font-size: 2.5rem;
   margin: 0;
 }
@@ -294,6 +267,7 @@
 }
 #skills-container__outer .skills-container .skills-container__grid .skills-container__grid__item .skills-container__grid__item__container__img__container .skills-container__grid__item__container__img {
   max-height: 10rem;
+  width: 100%;
   margin: auto;
 }
 #skills-container__outer .skills-container .skills-container__grid .skills-container__grid__item .skills-container__grid__item__container__text__container {
@@ -416,6 +390,48 @@
   border-radius: 10px;
 }
 
+@media screen and (min-width: 400px) {
+  #skills-container__outer .skills-container .skills-container__grid .skills-container__grid__item .skills-container__grid__item__container__img__container .skills-container__grid__item__container__img {
+    width: auto;
+  }
+}
+@media screen and (min-width: 700px) {
+  #open-toggle {
+    display: none;
+  }
+
+  #top-banner {
+    padding: 0 10rem;
+  }
+  #top-banner #top-banner__title {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  #top-banner #top-banner__title .title-container__title__line {
+    display: block;
+  }
+
+  #body-two-column-grid {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+  }
+  #body-two-column-grid aside {
+    position: sticky;
+    display: block;
+    width: 100%;
+    top: 0;
+    transform: translateX(0);
+  }
+  #body-two-column-grid aside #Aside-banner #Aside-banner__img {
+    width: 5vw;
+  }
+
+  .six-column-grid {
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 0 4rem;
+  }
+}
 @media screen and (min-width: 1000px) {
   #body-two-column-grid {
     grid-template-columns: 1fr 3fr;
@@ -511,6 +527,7 @@
   #skills-container__outer .skills-container .skills-container__title__container {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    margin-bottom: 2rem;
   }
   #skills-container__outer .skills-container .skills-container__title__container .skills-container__title__container__title {
     justify-self: left;
