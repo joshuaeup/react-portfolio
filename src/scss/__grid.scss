@@ -14,20 +14,74 @@ $colors: (
     font-size: 1.5rem;
 }
 
-#body-two-column-grid {
-    display: grid;
-    grid-template-columns: 1fr;
+#top-banner {
+    padding: 0;
+    #top-banner__title {
+        grid-template-columns: 1fr;
+        .title-container__title__line {
+            display: none;
+        }
+    }
+}
 
+#body-two-column-grid {
     aside {
-        display: none;
         background-color: map-get($map: $colors, $key: background);
         color: map-get($map: $colors, $key: text-color);
-        position: sticky;
-        top: 0;
-        left: 0;
+        position: fixed;
         height: 100vh;
+        width: 100vw;
+        top: 4.375rem;
+        left: -100vw;
+
         margin: 0;
         padding: 0;
+        transition: all 0.8s;
+
+        #Aside-banner {
+            #Aside-banner__img {
+                width: 15vw;
+            }
+        }
+    }
+
+    .change {
+        left: 0;
+    }
+}
+
+@media screen and (min-width: 700px) {
+    #open-toggle {
+        display: none;
+    }
+
+    #top-banner {
+        padding: 0 10rem;
+        #top-banner__title {
+            grid-template-columns: repeat(3, 1fr);
+            .title-container__title__line {
+                display: block;
+            }
+        }
+    }
+
+    #body-two-column-grid {
+        display: grid;
+        grid-template-columns: 1fr 3fr;
+
+        aside {
+            position: sticky;
+            display: block;
+            width: 100%;
+            top: 0;
+            transform: translateX(0);
+
+            #Aside-banner {
+                #Aside-banner__img {
+                    width: 5vw;
+                }
+            }
+        }
     }
 }
 
@@ -400,20 +454,6 @@ $colors: (
 }
 
 // Media Quires
-
-@media screen and (min-width: 700px) {
-    #open-toggle {
-        display: none;
-    }
-
-    #body-two-column-grid {
-        grid-template-columns: 1fr 3fr;
-
-        aside {
-            display: block;
-        }
-    }
-}
 
 @media screen and (min-width: 1000px) {
     #body-two-column-grid {

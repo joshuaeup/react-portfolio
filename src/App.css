@@ -61,22 +61,65 @@
   font-size: 1.5rem;
 }
 
-#body-two-column-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-}
-#body-two-column-grid aside {
-  display: none;
-  background-color: #33383e;
-  color: #ffffff;
-  position: sticky;
-  top: 0;
-  left: 0;
-  height: 100vh;
-  margin: 0;
+#top-banner {
   padding: 0;
 }
+#top-banner #top-banner__title {
+  grid-template-columns: 1fr;
+}
+#top-banner #top-banner__title .title-container__title__line {
+  display: none;
+}
 
+#body-two-column-grid aside {
+  background-color: #33383e;
+  color: #ffffff;
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  top: 4.375rem;
+  left: -100vw;
+  margin: 0;
+  padding: 0;
+  transition: all 0.8s;
+}
+#body-two-column-grid aside #Aside-banner #Aside-banner__img {
+  width: 15vw;
+}
+#body-two-column-grid .change {
+  left: 0;
+}
+
+@media screen and (min-width: 700px) {
+  #open-toggle {
+    display: none;
+  }
+
+  #top-banner {
+    padding: 0 10rem;
+  }
+  #top-banner #top-banner__title {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  #top-banner #top-banner__title .title-container__title__line {
+    display: block;
+  }
+
+  #body-two-column-grid {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+  }
+  #body-two-column-grid aside {
+    position: sticky;
+    display: block;
+    width: 100%;
+    top: 0;
+    transform: translateX(0);
+  }
+  #body-two-column-grid aside #Aside-banner #Aside-banner__img {
+    width: 5vw;
+  }
+}
 #profile-container {
   background-color: #fafafa;
   padding: 2rem 4rem;
@@ -373,18 +416,6 @@
   border-radius: 10px;
 }
 
-@media screen and (min-width: 700px) {
-  #open-toggle {
-    display: none;
-  }
-
-  #body-two-column-grid {
-    grid-template-columns: 1fr 3fr;
-  }
-  #body-two-column-grid aside {
-    display: block;
-  }
-}
 @media screen and (min-width: 1000px) {
   #body-two-column-grid {
     grid-template-columns: 1fr 3fr;
@@ -638,7 +669,6 @@ body {
   align-content: center;
   margin: 0;
   width: 100%;
-  padding: 0 10rem;
 }
 #top-banner #top-banner__title {
   margin: 0;
@@ -646,7 +676,6 @@ body {
   color: white;
   text-align: center;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
   justify-content: space-between;
   width: 100%;
 }

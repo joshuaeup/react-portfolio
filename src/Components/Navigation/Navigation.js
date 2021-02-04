@@ -1,6 +1,6 @@
 import React from "react";
 
-const Navigation = () => {
+const Navigation = (props) => {
     return (
         <>
             <div id="Aside-banner">
@@ -14,7 +14,8 @@ const Navigation = () => {
             <div id="Navigation">
                 <ul>
                     <li className="Navigation-item">
-                        <i className="fas fa-home"></i> <span>Home</span>
+                        <i className="fas fa-home"></i>{" "}
+                        <span onClick={props.toggle}>Home</span>
                     </li>
                     <li className="Navigation-item">
                         <i className="fas fa-user-circle"></i>{" "}
