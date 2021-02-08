@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
-import { Route } from "react-router-dom";
+import { Route, Switch } from "react-router-dom";
 import Navigation from "../../Components/Navigation/Navigation";
+import Projects from "../../Containers/Portfolio/Project/Project";
 
 // Containers
 import Home from "./Home/Home";
@@ -40,8 +41,16 @@ const Portfolio = () => {
                         <aside className={toggleClass}>
                             <Navigation toggle={toggleHandler} />
                         </aside>
-                        <Route to="/" render={() => <Home />} />
+                        <Switch>
+                            <Route path="/" exact render={() => <Home />} />
+                            <Route
+                                path="/projects/one"
+                                exact
+                                render={() => <Projects />}
+                            />
+                        </Switch>
                     </div>
+                    {/* <Footer /> */}
                 </>
             ) : (
                 <div id="loader-container">

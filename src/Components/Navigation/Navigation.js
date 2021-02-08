@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Navigation = (props) => {
     return (
@@ -13,10 +14,13 @@ const Navigation = (props) => {
             </div>
             <div id="Navigation">
                 <ul>
-                    <li className="Navigation-item">
-                        <i className="fas fa-home"></i>{" "}
-                        <span onClick={props.toggle}>Home</span>
-                    </li>
+                    <Link to="/">
+                        <li className="Navigation-item">
+                            <i className="fas fa-home"></i>{" "}
+                            <span onClick={props.toggle}>Home</span>
+                        </li>
+                    </Link>
+
                     <li className="Navigation-item">
                         <i className="fas fa-user-circle"></i>{" "}
                         <span>Profile</span>

@@ -5,7 +5,7 @@ const Contact = () => {
     // const [active, setActive] = useState(true);
     return (
         <main id="padded-main">
-            <h2 className="contact-grid-container__title">Contact Me</h2>
+            <h2 className="two-column-grid__column__title">Contact Me</h2>
             <div className="two-grid-container">
                 <div className="contact-column">
                     <div className="contact-column__link__container">
