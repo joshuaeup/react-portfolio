@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Route, Switch } from "react-router-dom";
 import Navigation from "../../Components/Navigation/Navigation";
 import Projects from "../../Containers/Portfolio/Project/Project";
+import ProjectsData from "./ProjectsData.js";
 
 // Containers
 import Home from "./Home/Home";
@@ -10,12 +11,29 @@ const Portfolio = () => {
     const [loading, setLoading] = useState(true);
     const [toggle, setToggle] = useState(true);
     const [toggleClass, setToggleClass] = useState("");
-    // let toggleClass = "";
+    const [projects] = useState(ProjectsData);
 
     // Updates loading state to false after 6 seconds
     useEffect(() => {
         setTimeout(() => setLoading(false), 2000);
     });
+
+    // Method to find product using param
+    const findProject = (project) => {
+        // Find element with matching title
+        const selectedProject = projects.find((item) => {
+            return String(item.title) === project;
+        });
+
+        // Log message and exit if error
+        if (!selectedProject) {
+            console.log("Product Not Found");
+            return;
+        }
+
+        // Return result
+        return selectedProject;
+    };
 
     const toggleHandler = () => {
         // Change state after execution
@@ -42,11 +60,21 @@ const Portfolio = () => {
                             <Navigation toggle={toggleHandler} />
                         </aside>
                         <Switch>
-                            <Route path="/" exact render={() => <Home />} />
                             <Route
-                                path="/projects/one"
+                                path="/"
                                 exact
-                                render={() => <Projects />}
+                                render={() => <Home data={projects} />}
+                            />
+                            <Route
+                                path="/projects/:project"
+                                exact
+                                render={(props) => (
+                                    <Projects
+                                        data={findProject(
+                                            props.match.params.project
+                                        )}
+                                    />
+                                )}
                             />
                         </Switch>
                     </div>

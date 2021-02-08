@@ -2,10 +2,11 @@ import React, { useEffect } from "react";
 import Banner from "../../../Components/Banner/Banner";
 import Footer from "../../../Components/Footer/Footer";
 
-const Projects = () => {
+const Projects = (props) => {
     useEffect(() => {
         window.scrollTo(0, 0);
     });
+    console.log(props.data);
     return (
         <div id="Main">
             <Banner title="Projects" />
@@ -13,14 +14,14 @@ const Projects = () => {
                 <div className="two-column-grid">
                     <div className="two-column-grid__column">
                         <h2 className="two-column-grid__column__title">
-                            Portfolio Mock-One
+                            {props.data.title}
                         </h2>
                         <hr
                             className="border-line"
                             style={{ marginBottom: 0 }}
                         />
                         <p className="two-column-grid__column__subtitle">
-                            November 2017
+                            {props.data.expanded.date}
                         </p>
                         <p
                             className="two-column-grid__column__body"
@@ -29,25 +30,21 @@ const Projects = () => {
                                 color: "#494747",
                             }}
                         >
-                            I designed the first version of my portfolio after
-                            completing the UNC Charlotte Coding Bootcamp. The
-                            purpose of this portfolio was to display my current
-                            coding abilities, while also housing all of the new
-                            projects I would develop in the future.
+                            {props.data.expanded.text}
                         </p>
                         <div id="two-column-grid__column__link__container">
                             <a
                                 className="two-column-grid__column__link"
-                                href="/"
+                                href={props.data.expanded.repo}
                             >
                                 <button className="btn">View Github</button>
                             </a>
 
                             <a
                                 className="two-column-grid__column__link"
-                                href="/"
+                                href={props.data.expanded.site}
                             >
-                                <button className="btn">View Live Site</button>
+                                <button className="btn">View Site</button>
                             </a>
                         </div>
                     </div>
@@ -56,7 +53,7 @@ const Projects = () => {
                             <img
                                 className="two-column-grid__column__img"
                                 alt="profile"
-                                src="https://cdn.auth0.com/blog/react-js/react.png"
+                                src={props.data.expanded.logo}
                             />
                         </div>
                     </div>
@@ -77,7 +74,7 @@ const Projects = () => {
                     <img
                         className="product-page-img-wide"
                         alt="Project"
-                        src="https://joshuaeup.github.io/my-port/static/media/mockOneBanner.d314473a.PNG"
+                        src={props.data.expanded.images[0]}
                     />
 
                     <div className="product-page-container__body__container">
@@ -85,11 +82,7 @@ const Projects = () => {
                             Background
                         </h1>
                         <p className="product-page-container__text">
-                            The Portfolio Mock-One was my first larger scaled
-                            project using Javascript Libraries including
-                            React.js, and Express.js. This project enabled me to
-                            practice linking the Front-End UI design with the
-                            Back-End development structure.
+                            {props.data.expanded.background}
                         </p>
                     </div>
                 </div>
@@ -98,7 +91,7 @@ const Projects = () => {
                     <img
                         className="product-page-img-wide"
                         alt="Project"
-                        src="https://joshuaeup.github.io/my-port/static/media/mockOneBanner.d314473a.PNG"
+                        src={props.data.expanded.images[1]}
                     />
 
                     <div className="product-page-container__body__container">
@@ -106,11 +99,7 @@ const Projects = () => {
                             Background
                         </h1>
                         <p className="product-page-container__text">
-                            The Portfolio Mock-One was my first larger scaled
-                            project using Javascript Libraries including
-                            React.js, and Express.js. This project enabled me to
-                            practice linking the Front-End UI design with the
-                            Back-End development structure.
+                            {props.data.expanded.background}
                         </p>
                     </div>
                 </div>
@@ -121,17 +110,13 @@ const Projects = () => {
                             Background
                         </h1>
                         <p className="product-page-container__text">
-                            The Portfolio Mock-One was my first larger scaled
-                            project using Javascript Libraries including
-                            React.js, and Express.js. This project enabled me to
-                            practice linking the Front-End UI design with the
-                            Back-End development structure.
+                            {props.data.expanded.background}
                         </p>
                     </div>
                     <img
                         className="product-page-img-wide"
                         alt="Project"
-                        src="https://joshuaeup.github.io/my-port/static/media/mockOneBanner.d314473a.PNG"
+                        src={props.data.expanded.images[2]}
                     />
                 </div>
                 <h2
@@ -148,22 +133,26 @@ const Projects = () => {
                     className="product-page-container-grid"
                     style={{ paddingTop: 0 }}
                 >
-                    <div className="product-page-container__body__container__grid">
-                        <h1 className="product-page-container__title">
-                            Frontend
-                        </h1>
-                        <p className="product-page-container__text">
-                            HTML | CSS | JavaScript | React | Bootstrap
-                        </p>
-                    </div>
-                    <div className="product-page-container__body__container__grid">
-                        <h1 className="product-page-container__title">
-                            Backend
-                        </h1>
-                        <p className="product-page-container__text">
-                            JavaScript | Node.js | Express.js | SQL
-                        </p>
-                    </div>
+                    {props.data.expanded.frontend !== "" && (
+                        <div className="product-page-container__body__container__grid">
+                            <h1 className="product-page-container__title">
+                                Frontend
+                            </h1>
+                            <p className="product-page-container__text">
+                                {props.data.expanded.frontend}
+                            </p>
+                        </div>
+                    )}
+                    {props.data.expanded.backend !== "" && (
+                        <div className="product-page-container__body__container__grid">
+                            <h1 className="product-page-container__title">
+                                Backend
+                            </h1>
+                            <p className="product-page-container__text">
+                                {props.data.expanded.backend}
+                            </p>
+                        </div>
+                    )}
                 </div>
             </div>
 

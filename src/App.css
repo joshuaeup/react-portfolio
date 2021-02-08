@@ -202,6 +202,7 @@
 #projects-container {
   background-color: #ffffff;
   padding: 2rem 4rem;
+  padding-top: 0;
 }
 #projects-container .portfolio-column-grid {
   display: grid;
@@ -218,6 +219,7 @@
   border: solid 1px white;
   padding: 0.8rem;
   background-color: #ececec;
+  height: 100%;
 }
 #projects-container .portfolio-column-grid .portfolio-column-grid__column .portfolio-column-grid__column__img__container .portfolio-column-grid__column__img {
   height: 100%;

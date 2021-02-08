@@ -179,6 +179,7 @@ $colors: (
 #projects-container {
     background-color: #ffffff;
     padding: 2rem 4rem;
+    padding-top: 0;
     // Portfolio Column Grid
     .portfolio-column-grid {
         // background-color: #ffffff;
@@ -197,6 +198,7 @@ $colors: (
             border: solid 1px white;
             padding: 0.8rem;
             background-color: #ececec;
+            height: 100%;
 
             .portfolio-column-grid__column__img__container {
                 .portfolio-column-grid__column__img {

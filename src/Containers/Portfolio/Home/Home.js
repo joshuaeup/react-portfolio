@@ -15,7 +15,7 @@ const Home = (props) => {
         <div id="Main">
             <Banner title="Portfolio" />
             <Profile />
-            <Projects />
+            <Projects data={props.data} />
             <Skills />
             <hr className="border-line" />
             <Contact />
