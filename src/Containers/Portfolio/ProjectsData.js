@@ -1,7 +1,8 @@
 const ProjectsData = [
     {
+        id: 0,
         title: "Portfolio Project",
-        subTitle: "Portfolio Sub",
+        subTitle: "Personal Project",
         expanded: {
             date: "November 2017",
             text:
@@ -19,6 +20,7 @@ const ProjectsData = [
         },
     },
     {
+        id: 1,
         title: "GateWay",
         subTitle: "R2H Fellowship",
         expanded: {
@@ -39,8 +41,9 @@ const ProjectsData = [
         },
     },
     {
+        id: 2,
         title: "Valerie Web",
-        subTitle: "Portfolio Sub",
+        subTitle: "Personal Project",
         expanded: {
             date: "June 2019",
             text:
@@ -60,6 +63,7 @@ const ProjectsData = [
     },
 
     {
+        id: 3,
         title: "Baked and Bubbly",
         subTitle: "R2H Fellowship",
         expanded: {
@@ -82,6 +86,7 @@ const ProjectsData = [
         },
     },
     {
+        id: 4,
         title: "Quarantips",
         subTitle: "R2H Fellowship",
         expanded: {

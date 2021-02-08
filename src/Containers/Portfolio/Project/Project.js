@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import Banner from "../../../Components/Banner/Banner";
 import Footer from "../../../Components/Footer/Footer";
+import { Link } from "react-router-dom";
 
 const Projects = (props) => {
     useEffect(() => {
@@ -153,6 +154,30 @@ const Projects = (props) => {
                             </p>
                         </div>
                     )}
+                    <div className="project-navigation-container">
+                        {props.data.id > 0 && (
+                            <Link className="" to={`${props.data.id - 1}`}>
+                                <button
+                                    id="prev"
+                                    className="project-navigation"
+                                >
+                                    <i className="fas fa-arrow-left"></i>{" "}
+                                    <span>Previous</span>
+                                </button>
+                            </Link>
+                        )}
+                        {props.data.id < 4 && (
+                            <Link className="" to={`${props.data.id + 1}`}>
+                                <button
+                                    id="next"
+                                    className="project-navigation"
+                                >
+                                    <span>Next</span>{" "}
+                                    <i className="fas fa-arrow-right"></i>
+                                </button>
+                            </Link>
+                        )}
+                    </div>
                 </div>
             </div>
 

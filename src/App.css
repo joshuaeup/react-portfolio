@@ -152,13 +152,14 @@
 #profile-container .two-column-grid #two-column-grid__column__link__container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-gap: 1rem;
 }
 #profile-container .two-column-grid #two-column-grid__column__link__container .btn {
   background-color: #04559b;
   padding: 0.7rem 1rem;
   border: solid 1px #ced4da;
   border-radius: 5px;
-  width: 70%;
+  width: 100%;
   justify-self: center;
   color: white;
   font-size: 1rem;
@@ -225,6 +226,47 @@
   height: 100%;
   width: 100%;
 }
+
+.project-navigation-container {
+  position: relative;
+  padding-top: 5rem;
+  width: 100%;
+}
+.project-navigation-container a {
+  text-decoration: none;
+}
+.project-navigation-container .project-navigation {
+  margin: 1rem 0;
+  position: absolute;
+  background-color: #04559b;
+  padding: 0.7rem 1rem;
+  border: solid 1px #ced4da;
+  border-radius: 5px;
+  width: 40%;
+  justify-self: center;
+  color: white;
+  font-size: 2rem;
+  transition: all 0.3s;
+  display: grid;
+  grid-template-columns: auto;
+  grid-auto-rows: min-content;
+  align-items: center;
+}
+.project-navigation-container .project-navigation span {
+  display: none;
+  font-size: 1.5rem;
+}
+.project-navigation-container #prev {
+  left: 0;
+}
+.project-navigation-container #next {
+  right: 0;
+}
+.project-navigation-container .project-navigation:hover {
+  cursor: pointer;
+  background-color: #0563b4;
+}
+
 #skills-container__outer {
   background-color: #fafafa;
 }
@@ -552,6 +594,19 @@
     grid-template-columns: repeat(3, 1fr);
     margin: 0 4rem;
   }
+
+  .project-navigation-container .project-navigation {
+    grid-template-columns: auto auto;
+  }
+  .project-navigation-container .project-navigation span {
+    display: inline-block;
+  }
+  .project-navigation-container .project-navigation .fa-arrow-left {
+    padding-right: 1rem;
+  }
+  .project-navigation-container .project-navigation .fa-arrow-right {
+    padding-left: 1rem;
+  }
 }
 @media screen and (min-width: 1000px) {
   #body-two-column-grid {
@@ -724,6 +779,10 @@
   #product-page-container-grid .product-page-container,
 #product-page-container-grid .product-page-container-grid {
     padding: 8rem 12rem;
+  }
+
+  .project-navigation-container .project-navigation {
+    width: auto;
   }
 }
 /* Footer */

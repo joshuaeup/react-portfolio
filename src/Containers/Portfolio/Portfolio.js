@@ -12,6 +12,7 @@ const Portfolio = () => {
     const [toggle, setToggle] = useState(true);
     const [toggleClass, setToggleClass] = useState("");
     const [projects] = useState(ProjectsData);
+    // const [currentProject, setCurrentProject] = useState(0);
 
     // Updates loading state to false after 6 seconds
     useEffect(() => {
@@ -19,15 +20,15 @@ const Portfolio = () => {
     });
 
     // Method to find product using param
-    const findProject = (project) => {
+    const findProject = (id) => {
         // Find element with matching title
         const selectedProject = projects.find((item) => {
-            return String(item.title) === project;
+            return item.id === Number(id);
         });
 
         // Log message and exit if error
         if (!selectedProject) {
-            console.log("Product Not Found");
+            console.log("Project Not Found");
             return;
         }
 
@@ -46,6 +47,13 @@ const Portfolio = () => {
             setToggleClass("");
         }
     };
+
+    // const nextProject = () => {
+    //     console.log("Clicked");
+    //     // setCurrentProject(1);
+    // };
+
+    // const prevProject = () => {};
     return (
         <>
             {loading === false ? (
@@ -66,13 +74,15 @@ const Portfolio = () => {
                                 render={() => <Home data={projects} />}
                             />
                             <Route
-                                path="/projects/:project"
+                                path="/projects/:id"
                                 exact
                                 render={(props) => (
                                     <Projects
                                         data={findProject(
-                                            props.match.params.project
+                                            props.match.params.id
                                         )}
+                                        id={props.match.params.id}
+                                        // next={(id) => setCurrentProject(id + 1)}
                                     />
                                 )}
                             />

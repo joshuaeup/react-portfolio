@@ -120,13 +120,13 @@ $colors: (
         #two-column-grid__column__link__container {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-
+            grid-gap: 1rem;
             .btn {
                 background-color: #04559b;
                 padding: 0.7rem 1rem;
                 border: solid 1px #ced4da;
                 border-radius: 5px;
-                width: 70%;
+                width: 100%;
                 justify-self: center;
                 color: white;
                 font-size: 1rem;
@@ -206,15 +206,54 @@ $colors: (
                     width: 100%;
                 }
             }
-
-            .portfolio-column-grid__column__info {
-                .portfolio-column-grid__column__info__title {
-                }
-                .portfolio-column-grid__column__info__text {
-                }
-            }
         }
     }
+}
+
+.project-navigation-container {
+    position: relative;
+    padding-top: 5rem;
+    width: 100%;
+    a {
+        text-decoration: none;
+    }
+
+    .project-navigation {
+        margin: 1rem 0;
+        position: absolute;
+        background-color: #04559b;
+        padding: 0.7rem 1rem;
+        border: solid 1px #ced4da;
+        border-radius: 5px;
+        width: 40%;
+        justify-self: center;
+        color: white;
+        font-size: 2rem;
+        transition: all 0.3s;
+        display: grid;
+        grid-template-columns: auto;
+        grid-auto-rows: min-content;
+        align-items: center;
+
+        span {
+            display: none;
+            font-size: 1.5rem;
+        }
+    }
+
+    #prev {
+        left: 0;
+    }
+
+    #next {
+        right: 0;
+    }
+
+    .project-navigation:hover {
+        cursor: pointer;
+        background-color: lighten(#04559b, 5%);
+    }
+    // }
 }
 
 #skills-container__outer {
@@ -618,6 +657,24 @@ $colors: (
         grid-template-columns: repeat(3, 1fr);
         margin: $standard-margin;
     }
+
+    .project-navigation-container {
+        .project-navigation {
+            grid-template-columns: auto auto;
+
+            span {
+                display: inline-block;
+            }
+
+            .fa-arrow-left {
+                padding-right: 1rem;
+            }
+
+            .fa-arrow-right {
+                padding-left: 1rem;
+            }
+        }
+    }
 }
 
 @media screen and (min-width: 1000px) {
@@ -854,6 +911,12 @@ $colors: (
         .product-page-container,
         .product-page-container-grid {
             padding: 8rem 12rem;
+        }
+    }
+
+    .project-navigation-container {
+        .project-navigation {
+            width: auto;
         }
     }
 }
