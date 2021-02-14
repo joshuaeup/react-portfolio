@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-scroll";
+import Pdf from "../../assets/Resume.pdf";
 
 const Navigation = (props) => {
     return (
@@ -50,6 +51,17 @@ const Navigation = (props) => {
                             <span>Contact</span>
                         </li>
                     </Link>
+                    <a
+                        href={Pdf}
+                        target="_blank"
+                        onClick={props.toggleHandler}
+                        rel="noreferrer"
+                    >
+                        <li className="Navigation-item">
+                            <i className="fa fa-file-pdf"></i>{" "}
+                            <span>Resume</span>
+                        </li>
+                    </a>
                 </ul>
             </div>
         </>
