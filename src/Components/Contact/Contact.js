@@ -2,10 +2,9 @@ import React, { useState } from "react";
 
 const Contact = () => {
     const [inputType, setInputType] = useState("feedback");
-    // const [active, setActive] = useState(true);
     return (
-        <main id="padded-main">
-            <h2 className="contact-grid-container__title">Contact Me</h2>
+        <main id="padded-main" style={{ padding: "2rem 0" }}>
+            <h2 className="two-column-grid__column__title">Contact Me</h2>
             <div className="two-grid-container">
                 <div className="contact-column">
                     <div className="contact-column__link__container">
@@ -50,10 +49,7 @@ const Contact = () => {
                 <div className="contact-column">
                     {inputType === "feedback" && (
                         <>
-                            <form
-                                name="feedback"
-                                // onSubmit={this.formFeedbackSubmitHandler}
-                            >
+                            <form name="feedback">
                                 <div className="input-container">
                                     <label
                                         className="input-container__label"
@@ -141,10 +137,7 @@ const Contact = () => {
                     )}
                     {inputType === "general" && (
                         <>
-                            <form
-                                name="general"
-                                // onSubmit={this.formGeneralSubmitHandler}
-                            >
+                            <form name="general">
                                 <div className="input-container">
                                     <label
                                         className="input-container__label"
@@ -221,9 +214,5 @@ const Contact = () => {
         </main>
     );
 };
-
-// const onChangeHandler = (e) => {
-//     setInputType(e.target.value);
-// };
 
 export default Contact;

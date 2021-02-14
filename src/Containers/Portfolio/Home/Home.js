@@ -1,28 +1,36 @@
-import React from "react";
+import React, { useEffect } from "react";
 // Components
+import Navigation from "../../../Components/Navigation/Navigation";
 import Profile from "../../../Components/Profile/Profile";
 import Projects from "../../../Components/Projects/Projects";
-import Skills from "../../../Components/Skills/Skills";
 import Contact from "../../../Components/Contact/Contact";
 import Footer from "../../../Components/Footer/Footer";
+import Banner from "../../../Components/Banner/Banner";
+import { Element } from "react-scroll";
 
 const Home = (props) => {
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    });
     return (
-        <div id="Main">
-            <div id="top-banner">
-                <h1 id="top-banner__title">
-                    <hr className="title-container__title__line" />
-                    <span>Portfolio</span>
-                    <hr className="title-container__title__line" />
-                </h1>
+        <>
+            <aside className={props.toggleClass}>
+                <Navigation toggleHandler={props.toggleHandler} />
+            </aside>
+            <div id="Main">
+                <Banner title="Portfolio" />
+                <Element name="profile-scroll">
+                    <Profile />
+                </Element>
+                <Element name="projects-scroll">
+                    <Projects data={props.data} />
+                </Element>
+                <Element name="contact-scroll">
+                    <Contact />
+                </Element>
+                <Footer />
             </div>
-            <Profile />
-            <Projects />
-            <Skills />
-            <hr className="border-line" />
-            <Contact />
-            <Footer />
-        </div>
+        </>
     );
 };
 

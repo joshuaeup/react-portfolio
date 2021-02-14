@@ -2,7 +2,7 @@
 @import "./scss/_grid";
 @import "./scss/_footer";
 @import "./scss/_loader";
-@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,900;1,300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
 
 * {
     box-sizing: border-box;
@@ -29,14 +29,14 @@ body {
     align-content: center;
     margin: 0;
     width: 100%;
-    padding: 0 10rem;
+    // padding: 0 10rem;
     #top-banner__title {
         margin: 0;
         padding: 1rem 0;
         color: white;
         text-align: center;
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        // grid-template-columns: repeat(3, 1fr);
         justify-content: space-between;
         width: 100%;
 
