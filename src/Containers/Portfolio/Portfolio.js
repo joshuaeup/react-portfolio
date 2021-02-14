@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import { Route, Switch } from "react-router-dom";
-import Navigation from "../../Components/Navigation/Navigation";
 import Projects from "../../Containers/Portfolio/Project/Project";
 import ProjectsData from "./ProjectsData.js";
 
@@ -12,7 +11,6 @@ const Portfolio = () => {
     const [toggle, setToggle] = useState(true);
     const [toggleClass, setToggleClass] = useState("");
     const [projects] = useState(ProjectsData);
-    // const [currentProject, setCurrentProject] = useState(0);
 
     // Updates loading state to false after 6 seconds
     useEffect(() => {
@@ -46,14 +44,9 @@ const Portfolio = () => {
         } else {
             setToggleClass("");
         }
+        console.log("Clicked");
     };
 
-    // const nextProject = () => {
-    //     console.log("Clicked");
-    //     // setCurrentProject(1);
-    // };
-
-    // const prevProject = () => {};
     return (
         <>
             {loading === false ? (
@@ -64,31 +57,34 @@ const Portfolio = () => {
                         onClick={toggleHandler}
                     ></i>
                     <div id="body-two-column-grid">
-                        <aside className={toggleClass}>
-                            <Navigation toggle={toggleHandler} />
-                        </aside>
                         <Switch>
                             <Route
                                 path="/"
                                 exact
-                                render={() => <Home data={projects} />}
+                                render={() => (
+                                    <Home
+                                        toggleClass={toggleClass}
+                                        toggleHandler={toggleHandler}
+                                        data={projects}
+                                    />
+                                )}
                             />
                             <Route
                                 path="/projects/:id"
                                 exact
                                 render={(props) => (
                                     <Projects
+                                        toggleClass={toggleClass}
+                                        toggleHandler={toggleHandler}
                                         data={findProject(
                                             props.match.params.id
                                         )}
                                         id={props.match.params.id}
-                                        // next={(id) => setCurrentProject(id + 1)}
                                     />
                                 )}
                             />
                         </Switch>
                     </div>
-                    {/* <Footer /> */}
                 </>
             ) : (
                 <div id="loader-container">

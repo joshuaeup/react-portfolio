@@ -205,6 +205,22 @@
   padding: 2rem 4rem;
   padding-top: 0;
 }
+#projects-container #filter-input-container {
+  display: block;
+  padding: 1rem 0;
+  font-size: 1.5rem;
+  font-weight: 500;
+  width: 100%;
+  text-align: center;
+}
+#projects-container #filter-input-container #filter-input {
+  text-align: start;
+  padding: 0.7rem 1rem;
+  border: solid 1px #ced4da;
+  border-radius: 5px;
+  margin: 1rem 0;
+  width: 100%;
+}
 #projects-container .portfolio-column-grid {
   display: grid;
   grid-template-columns: 1fr;
@@ -782,6 +798,30 @@
   }
 
   .project-navigation-container .project-navigation {
+    width: auto;
+  }
+
+  #projects-container {
+    background-color: #ffffff;
+    padding: 2rem 4rem;
+    padding-top: 0;
+  }
+  #projects-container #filter-input-container {
+    display: grid;
+    justify-content: start;
+    grid-auto-columns: 30%;
+    text-align: start;
+    padding: 0 4rem;
+    font-size: 1.5rem;
+    font-weight: 500;
+    width: 100%;
+  }
+  #projects-container #filter-input-container #filter-input {
+    text-align: start;
+    padding: 0.7rem 1rem;
+    border: solid 1px #ced4da;
+    border-radius: 5px;
+    margin: 1rem 0;
     width: auto;
   }
 }

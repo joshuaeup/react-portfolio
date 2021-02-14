@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link } from "react-scroll";
 
 const Navigation = (props) => {
     return (
@@ -14,27 +14,42 @@ const Navigation = (props) => {
             </div>
             <div id="Navigation">
                 <ul>
-                    <Link to="/">
+                    <Link
+                        to="profile-scroll"
+                        spy={true}
+                        smooth={true}
+                        offset={-70}
+                        onClick={props.toggleHandler}
+                    >
                         <li className="Navigation-item">
-                            <i className="fas fa-home"></i>{" "}
-                            <span onClick={props.toggle}>Home</span>
+                            <i className="fas fa-user-circle"></i>{" "}
+                            <span>Profile</span>
                         </li>
                     </Link>
-
-                    <li className="Navigation-item">
-                        <i className="fas fa-user-circle"></i>{" "}
-                        <span>Profile</span>
-                    </li>
-                    <li className="Navigation-item">
-                        <i className="fas fa-laptop"></i> <span>Projects</span>
-                    </li>
-                    <li className="Navigation-item">
-                        <i className="fas fa-toolbox"></i> <span>Skills</span>
-                    </li>
-                    <li className="Navigation-item">
-                        <i className="fas fa-envelope-open-text"></i>{" "}
-                        <span>Contact</span>
-                    </li>
+                    <Link
+                        to="projects-scroll"
+                        spy={true}
+                        smooth={true}
+                        offset={-60}
+                        onClick={props.toggleHandler}
+                    >
+                        <li className="Navigation-item">
+                            <i className="fas fa-laptop"></i>{" "}
+                            <span>Projects</span>
+                        </li>
+                    </Link>
+                    <Link
+                        to="contact-scroll"
+                        spy={true}
+                        smooth={true}
+                        offset={-70}
+                        onClick={props.toggleHandler}
+                    >
+                        <li className="Navigation-item">
+                            <i className="fas fa-envelope-open-text"></i>{" "}
+                            <span>Contact</span>
+                        </li>
+                    </Link>
                 </ul>
             </div>
         </>
