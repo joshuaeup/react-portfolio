@@ -80,6 +80,7 @@ const Portfolio = () => {
                                             props.match.params.id
                                         )}
                                         id={props.match.params.id}
+                                        length={projects.length}
                                     />
                                 )}
                             />

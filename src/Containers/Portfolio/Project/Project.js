@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import Banner from "../../../Components/Banner/Banner";
 import Footer from "../../../Components/Footer/Footer";
 import { Link } from "react-router-dom";
+import Pdf from "../../../assets/Resume.pdf";
 
 const Projects = (props) => {
     // const [loading, setLoading] = useState(true);
@@ -33,6 +34,17 @@ const Projects = (props) => {
                                     </span>
                                 </li>
                             </Link>
+                            <a
+                                href={Pdf}
+                                target="_blank"
+                                onClick={props.toggleHandler}
+                                rel="noreferrer"
+                            >
+                                <li className="Navigation-item">
+                                    <i className="fa fa-file-pdf"></i>{" "}
+                                    <span>Resume</span>
+                                </li>
+                            </a>
                         </ul>
                     </div>
                 </aside>
@@ -61,23 +73,27 @@ const Projects = (props) => {
                                     {props.data.expanded.text}
                                 </p>
                                 <div id="two-column-grid__column__link__container">
-                                    <a
-                                        className="two-column-grid__column__link"
-                                        href={props.data.expanded.repo}
-                                    >
-                                        <button className="btn">
-                                            View Github
-                                        </button>
-                                    </a>
+                                    {props.data.expanded.repo !== undefined && (
+                                        <a
+                                            className="two-column-grid__column__link"
+                                            href={props.data.expanded.repo}
+                                        >
+                                            <button className="btn">
+                                                View Github
+                                            </button>
+                                        </a>
+                                    )}
 
-                                    <a
-                                        className="two-column-grid__column__link"
-                                        href={props.data.expanded.site}
-                                    >
-                                        <button className="btn">
-                                            View Site
-                                        </button>
-                                    </a>
+                                    {props.data.expanded.site !== undefined && (
+                                        <a
+                                            className="two-column-grid__column__link"
+                                            href={props.data.expanded.site}
+                                        >
+                                            <button className="btn">
+                                                View Site
+                                            </button>
+                                        </a>
+                                    )}
                                 </div>
                             </div>
                             <div className="two-column-grid__column">
@@ -119,38 +135,43 @@ const Projects = (props) => {
                             </div>
                         </div>
 
-                        <div className="product-page-container">
-                            <img
-                                className="product-page-img-wide"
-                                alt="Project"
-                                src={props.data.expanded.images[1]}
-                            />
+                        {props.data.expanded.images[1] !== undefined && (
+                            <div className="product-page-container">
+                                <img
+                                    className="product-page-img-wide"
+                                    alt="Project"
+                                    src={props.data.expanded.images[1]}
+                                />
 
-                            <div className="product-page-container__body__container">
-                                <h1 className="product-page-container__title">
-                                    Background
-                                </h1>
-                                <p className="product-page-container__text">
-                                    {props.data.expanded.background}
-                                </p>
+                                <div className="product-page-container__body__container">
+                                    <h1 className="product-page-container__title">
+                                        {props.data.expanded.column1Title}
+                                    </h1>
+                                    <p className="product-page-container__text">
+                                        {props.data.expanded.column1Text}
+                                    </p>
+                                </div>
                             </div>
-                        </div>
+                        )}
 
-                        <div className="product-page-container">
-                            <div className="product-page-container__body__container">
-                                <h1 className="product-page-container__title">
-                                    Background
-                                </h1>
-                                <p className="product-page-container__text">
-                                    {props.data.expanded.background}
-                                </p>
+                        {props.data.expanded.images[2] !== undefined && (
+                            <div className="product-page-container">
+                                <div className="product-page-container__body__container">
+                                    <h1 className="product-page-container__title">
+                                        {props.data.expanded.column2Title}
+                                    </h1>
+                                    <p className="product-page-container__text">
+                                        {props.data.expanded.column2Text}
+                                    </p>
+                                </div>
+                                <img
+                                    className="product-page-img-wide"
+                                    alt="Project"
+                                    src={props.data.expanded.images[2]}
+                                />
                             </div>
-                            <img
-                                className="product-page-img-wide"
-                                alt="Project"
-                                src={props.data.expanded.images[2]}
-                            />
-                        </div>
+                        )}
+
                         <h2
                             className="two-column-grid__column__title"
                             style={{
@@ -200,7 +221,7 @@ const Projects = (props) => {
                                         </button>
                                     </Link>
                                 )}
-                                {props.data.id < 4 && (
+                                {props.data.id < props.length - 1 && (
                                     <Link
                                         className=""
                                         to={`${props.data.id + 1}`}
