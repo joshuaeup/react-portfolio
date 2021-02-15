@@ -125,14 +125,16 @@ const Projects = (props) => {
                                 src={props.data.expanded.images[0]}
                             />
 
-                            <div className="product-page-container__body__container">
-                                <h1 className="product-page-container__title">
-                                    Background
-                                </h1>
-                                <p className="product-page-container__text">
-                                    {props.data.expanded.background}
-                                </p>
-                            </div>
+                            {props.data.expanded.background !== undefined && (
+                                <div className="product-page-container__body__container">
+                                    <h1 className="product-page-container__title">
+                                        Background
+                                    </h1>
+                                    <p className="product-page-container__text">
+                                        {props.data.expanded.background}
+                                    </p>
+                                </div>
+                            )}
                         </div>
 
                         {props.data.expanded.images[1] !== undefined && (

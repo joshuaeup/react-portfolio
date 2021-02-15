@@ -5,11 +5,13 @@ import { Link } from "react-router-dom";
 const Projects = (props) => {
     // Set state of data
     const [projects, setProjects] = useState(props.data);
+    const [input, setInput] = useState("");
 
     // Function to filter projects by technologies
     const filterHandler = (e) => {
         // Accept input from user then convert to lower case
         const input = e.target.value.toLowerCase();
+        setInput(input);
 
         // Run filter to only store values that include entered frontend and backend technologies
         const filteredData = props.data.filter((project) => {
@@ -77,8 +79,8 @@ const Projects = (props) => {
                             })}
                         </>
                     ) : (
-                        <div>
-                            <h1>No data exist</h1>
+                        <div className="no-data-title">
+                            <p>No projects currently using {input}</p>
                         </div>
                     )}
                 </div>
