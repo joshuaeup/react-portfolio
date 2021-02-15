@@ -35,7 +35,10 @@ const Profile = (props) => {
                             </li>
                         </ul>
                     </div>
-                    <div className="two-column-grid__column">
+                    <div
+                        className="two-column-grid__column"
+                        style={{ marginBottom: "2rem" }}
+                    >
                         <div className="two-column-grid__column__img__container">
                             <img
                                 className="two-column-grid__column__img"

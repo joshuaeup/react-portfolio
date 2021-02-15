@@ -53,7 +53,10 @@ const Projects = (props) => {
                             {projects.map((project, id) => {
                                 console.log("ID:", id);
                                 return (
-                                    <Link key={id} to={`/projects/${id}`}>
+                                    <Link
+                                        key={id}
+                                        to={`/projects/${project.id}`}
+                                    >
                                         <div className="portfolio-column-grid__column">
                                             <div className="portfolio-column-grid__column__img__container">
                                                 <img
