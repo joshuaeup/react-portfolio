@@ -118,8 +118,7 @@ const ProjectsData = [
                 "https://lh3.googleusercontent.com/pw/ACtC-3eun3XkhbHXQsVwTfDq6bBo9kpwqRKpH2D6GUor6taeGS90VyITXxNcHV-oKUbNwoRicCund_2gPZHWegrMjSd1xpxuI9VGPxiughfrR4XA9Op0gKmMpnwboeiZXvXcpxhSEo6y07HWO7ou_8c3OFhp=w1895-h964-no?authuser=0",
                 "https://lh3.googleusercontent.com/pw/ACtC-3dVrcr7fS2nPIf6EQ_tzGJNJtxW9Y1ipyuDTxWL1CPI_Lfk3QTQ1p9bnFa7S2OIvPYmAXQ-CHjYsbJYVwJILMhXRs0Z9bnI74EmSnBMy96ctELVtG3SwLdP0_HhObVlQNHItjCKtDJaNu-W7IMUGeDq=w1895-h964-no?authuser=0",
             ],
-            repo: "https://github.com/joshuaeup/react-ecommerce",
-            site: "https://joshuaeup-ecommerce.netlify.app/",
+            repo: "https://github.com/joshuaeup/Quarantips",
         },
     },
     {
