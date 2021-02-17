@@ -1,4 +1,5 @@
 import React from "react";
+import PlaceHolderImg from "../../assets/images/placeholder.png";
 
 const Profile = (props) => {
     return (
@@ -57,7 +58,7 @@ const Profile = (props) => {
                             <img
                                 className="six-column-grid__social-link__container__link__img"
                                 alt="social"
-                                src="https://www.gaithersburgdental.com/wp-content/uploads/2016/10/orionthemes-placeholder-image.png"
+                                src={PlaceHolderImg}
                             />
                         </a>
                     </div>
@@ -69,7 +70,7 @@ const Profile = (props) => {
                             <img
                                 className="six-column-grid__social-link__container__link__img"
                                 alt="social"
-                                src="https://www.gaithersburgdental.com/wp-content/uploads/2016/10/orionthemes-placeholder-image.png"
+                                src={PlaceHolderImg}
                             />
                         </a>
                     </div>
@@ -81,7 +82,7 @@ const Profile = (props) => {
                             <img
                                 className="six-column-grid__social-link__container__link__img"
                                 alt="social"
-                                src="https://www.gaithersburgdental.com/wp-content/uploads/2016/10/orionthemes-placeholder-image.png"
+                                src={PlaceHolderImg}
                             />
                         </a>
                     </div>
@@ -93,7 +94,7 @@ const Profile = (props) => {
                             <img
                                 className="six-column-grid__social-link__container__link__img"
                                 alt="social"
-                                src="https://www.gaithersburgdental.com/wp-content/uploads/2016/10/orionthemes-placeholder-image.png"
+                                src={PlaceHolderImg}
                             />
                         </a>
                     </div>
@@ -105,7 +106,7 @@ const Profile = (props) => {
                             <img
                                 className="six-column-grid__social-link__container__link__img"
                                 alt="social"
-                                src="https://www.gaithersburgdental.com/wp-content/uploads/2016/10/orionthemes-placeholder-image.png"
+                                src={PlaceHolderImg}
                             />
                         </a>
                     </div>
@@ -117,7 +118,7 @@ const Profile = (props) => {
                             <img
                                 className="six-column-grid__social-link__container__link__img"
                                 alt="social"
-                                src="https://www.gaithersburgdental.com/wp-content/uploads/2016/10/orionthemes-placeholder-image.png"
+                                src={PlaceHolderImg}
                             />
                         </a>
                     </div>
