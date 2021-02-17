@@ -2,6 +2,32 @@ import React, { useState } from "react";
 
 const Contact = () => {
     const [inputType, setInputType] = useState("feedback");
+
+    // const sendMessage = (event) => {
+    //     event.preventDefault();
+    //     if (!this.validateMail()) {
+    //         return;
+    //         }
+    //     const templateParams = {
+    //       from_name: this.state.name + " (" + this.state.email + ")",
+    //       to_name: "joshuaeup@gmail.com",
+    //       feedback: this.state.feedback
+    //     };
+    //     emailjs
+    //         .send("gmail", "portfoliositecontact", templateParams, {id given from your EmailJS template})
+    //         .then(
+    //             function(response) {
+    //             toast.success("Your message has successfully sent!", {
+    //                 position: toast.POSITION.BOTTOM_CENTER
+    //             });
+    //             console.log("SUCCESS!", response.status, response.text);
+    //             },
+    //             function(err) {
+    //             toast.error("Your message was not able to be sent");
+    //             }
+    //         );
+    //     }
+
     return (
         <main id="padded-main" style={{ padding: "2rem 0" }}>
             <h2 className="two-column-grid__column__title">Contact Me</h2>

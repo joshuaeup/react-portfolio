@@ -57,7 +57,7 @@ const Profile = (props) => {
                             <img
                                 className="six-column-grid__social-link__container__link__img"
                                 alt="social"
-                                src="https://joshuaeup.github.io/my-port/static/media/profileThree.afa504b0.JPG"
+                                src="https://www.gaithersburgdental.com/wp-content/uploads/2016/10/orionthemes-placeholder-image.png"
                             />
                         </a>
                     </div>
@@ -69,7 +69,7 @@ const Profile = (props) => {
                             <img
                                 className="six-column-grid__social-link__container__link__img"
                                 alt="social"
-                                src="https://joshuaeup.github.io/my-port/static/media/profileThree.afa504b0.JPG"
+                                src="https://www.gaithersburgdental.com/wp-content/uploads/2016/10/orionthemes-placeholder-image.png"
                             />
                         </a>
                     </div>
@@ -81,7 +81,7 @@ const Profile = (props) => {
                             <img
                                 className="six-column-grid__social-link__container__link__img"
                                 alt="social"
-                                src="https://joshuaeup.github.io/my-port/static/media/profileThree.afa504b0.JPG"
+                                src="https://www.gaithersburgdental.com/wp-content/uploads/2016/10/orionthemes-placeholder-image.png"
                             />
                         </a>
                     </div>
@@ -93,7 +93,7 @@ const Profile = (props) => {
                             <img
                                 className="six-column-grid__social-link__container__link__img"
                                 alt="social"
-                                src="https://joshuaeup.github.io/my-port/static/media/profileThree.afa504b0.JPG"
+                                src="https://www.gaithersburgdental.com/wp-content/uploads/2016/10/orionthemes-placeholder-image.png"
                             />
                         </a>
                     </div>
@@ -105,7 +105,7 @@ const Profile = (props) => {
                             <img
                                 className="six-column-grid__social-link__container__link__img"
                                 alt="social"
-                                src="https://joshuaeup.github.io/my-port/static/media/profileThree.afa504b0.JPG"
+                                src="https://www.gaithersburgdental.com/wp-content/uploads/2016/10/orionthemes-placeholder-image.png"
                             />
                         </a>
                     </div>
@@ -117,7 +117,7 @@ const Profile = (props) => {
                             <img
                                 className="six-column-grid__social-link__container__link__img"
                                 alt="social"
-                                src="https://joshuaeup.github.io/my-port/static/media/profileThree.afa504b0.JPG"
+                                src="https://www.gaithersburgdental.com/wp-content/uploads/2016/10/orionthemes-placeholder-image.png"
                             />
                         </a>
                     </div>
