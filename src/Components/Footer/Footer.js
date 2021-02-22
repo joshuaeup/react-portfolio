@@ -30,7 +30,7 @@ const Footer = () => {
                     <i className="footer-social__icon fab fa-instagram"></i>
                 </a>
             </div>
-            <ul className="footer-link-list">
+            {/* <ul className="footer-link-list">
                 <li className="footer-link">
                     <a className="link" href="/">
                         About
@@ -62,8 +62,12 @@ const Footer = () => {
                         Privacy Policy
                     </a>
                 </li>
-            </ul>
-            <p id="copyright" className="footer-link">
+            </ul> */}
+            <p
+                id="copyright"
+                className="footer-link"
+                style={{ marginTop: "2rem" }}
+            >
                 © 2021 joshuaeup
             </p>
         </footer>

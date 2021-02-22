@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 import Title from "../Title/Title";
 import { Link } from "react-router-dom";
-
+import TextInput from "react-autocomplete-input";
+import "react-autocomplete-input/dist/bundle.css";
+const technologies = ["HTML", "CSS", "JavaScript", "React", "SCSS", "EJS"];
 const Projects = (props) => {
     // Set state of data
     const [projects, setProjects] = useState(props.data);
@@ -10,7 +12,7 @@ const Projects = (props) => {
     // Function to filter projects by technologies
     const filterHandler = (e) => {
         // Accept input from user then convert to lower case
-        const input = e.target.value.toLowerCase();
+        const input = e.toLowerCase().trim();
         setInput(input);
 
         // Run filter to only store values that include entered frontend and backend technologies
@@ -39,11 +41,17 @@ const Projects = (props) => {
                     >
                         Filter By Technologies
                     </label>
-                    <input
+                    <TextInput
+                        options={technologies}
                         id="filter-input"
                         placeholder="Ex: JavaScript"
-                        type="text"
+                        trigger={""}
                         onChange={filterHandler}
+                        style={{
+                            height: "60%",
+                            width: "100%",
+                            marginTop: "1rem",
+                        }}
                     />
                 </div>
 

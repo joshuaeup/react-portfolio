@@ -75,7 +75,12 @@ const Contact = () => {
                 <div className="contact-column">
                     {inputType === "feedback" && (
                         <>
-                            <form name="feedback">
+                            <form
+                                name="feedback"
+                                action="mailto:joshuaeup@gmail.com"
+                                method="POST"
+                                encType="type/html"
+                            >
                                 <div className="input-container">
                                     <label
                                         className="input-container__label"
@@ -163,7 +168,12 @@ const Contact = () => {
                     )}
                     {inputType === "general" && (
                         <>
-                            <form name="general">
+                            <form
+                                name="general"
+                                action="mailto:joshuaeup@gmail.com"
+                                method="POST"
+                                encType="type/html"
+                            >
                                 <div className="input-container">
                                     <label
                                         className="input-container__label"

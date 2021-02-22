@@ -34,6 +34,42 @@ const Projects = (props) => {
                                     </span>
                                 </li>
                             </Link>
+                            {/* <Link
+                                to="profile-scroll"
+                                spy={true}
+                                smooth={true}
+                                offset={-70}
+                                onClick={props.toggleHandler}
+                            >
+                                <li className="Navigation-item">
+                                    <i className="fas fa-user-circle"></i>{" "}
+                                    <span>Profile</span>
+                                </li>
+                            </Link>
+                            <Link
+                                to="projects-scroll"
+                                spy={true}
+                                smooth={true}
+                                offset={-60}
+                                onClick={props.toggleHandler}
+                            >
+                                <li className="Navigation-item">
+                                    <i className="fas fa-laptop"></i>{" "}
+                                    <span>Projects</span>
+                                </li>
+                            </Link>
+                            <Link
+                                to="contact-scroll"
+                                spy={true}
+                                smooth={true}
+                                offset={-70}
+                                onClick={props.toggleHandler}
+                            >
+                                <li className="Navigation-item">
+                                    <i className="fas fa-envelope-open-text"></i>{" "}
+                                    <span>Contact</span>
+                                </li>
+                            </Link> */}
                             <a
                                 href={Pdf}
                                 target="_blank"
@@ -77,6 +113,8 @@ const Projects = (props) => {
                                         <a
                                             className="two-column-grid__column__link"
                                             href={props.data.expanded.repo}
+                                            target="_blank"
+                                            rel="noreferrer"
                                         >
                                             <button className="btn">
                                                 View Github
@@ -88,6 +126,8 @@ const Projects = (props) => {
                                         <a
                                             className="two-column-grid__column__link"
                                             href={props.data.expanded.site}
+                                            target="_blank"
+                                            rel="noreferrer"
                                         >
                                             <button className="btn">
                                                 View Site

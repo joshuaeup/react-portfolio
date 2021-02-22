@@ -129,6 +129,10 @@
   justify-content: center;
   width: 100%;
 }
+#profile-container .two-column-grid .two-column-grid__column .two-column-grid__column__list a {
+  text-decoration: none;
+  color: #04559b;
+}
 #profile-container .two-column-grid .two-column-grid__column .two-column-grid__column__list .two-column-grid__column__list__item {
   font-size: 1.5rem;
   text-align: center;
@@ -826,8 +830,8 @@
     padding: 0.7rem 1rem;
     border: solid 1px #ced4da;
     border-radius: 5px;
-    margin: 1rem 0;
-    width: auto;
+    margin: auto;
+    resize: none;
   }
 }
 /* Footer */

@@ -189,8 +189,8 @@ const ProjectsData = [
             images: [
                 "https://lh3.googleusercontent.com/pw/ACtC-3cBwbCBtAffyt0CqYY-WWahSNTmIwD42eS2fQh7OkogMmkSuJOxZlEOZoZsbaKt3gjxL9WoPI2adZuSL8l-c48UthjJuo10BsMyO9rR9aYmf8Bmwa9-NqDCPDrDFhawE_-3UwvckSDtw1VcC8oLPe9Z=w1914-h967-no?authuser=0",
             ],
-            repo: "https://github.com/joshuaeup/Guessing-Game",
-            site: "https://joshuaeup.github.io/Guessing-Game/",
+            repo: "https://github.com/joshuaeup/Budgety",
+            site: "https://joshuaeup.github.io/Budgety/",
         },
     },
     {
