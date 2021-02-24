@@ -29,6 +29,12 @@ const Projects = (props) => {
         setProjects(filteredData);
     };
 
+    const onClickHandler = () => {
+        props.startLoading(props.loadSetter);
+        console.log("Clicked Load");
+        console.log(props.loadSetter);
+    };
+
     return (
         <>
             <div id="projects-container">
@@ -59,11 +65,11 @@ const Projects = (props) => {
                     {projects.length > 0 ? (
                         <>
                             {projects.map((project, id) => {
-                                console.log("ID:", id);
                                 return (
                                     <Link
                                         key={id}
                                         to={`/projects/${project.id}`}
+                                        onClick={onClickHandler}
                                     >
                                         <div className="portfolio-column-grid__column">
                                             <div className="portfolio-column-grid__column__img__container">

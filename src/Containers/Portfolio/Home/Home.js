@@ -23,7 +23,11 @@ const Home = (props) => {
                     <Profile />
                 </Element>
                 <Element name="projects-scroll">
-                    <Projects data={props.data} />
+                    <Projects
+                        data={props.data}
+                        startLoading={props.startLoading}
+                        loadSetter={props.loadSetter}
+                    />
                 </Element>
                 <Element name="contact-scroll">
                     <Contact />

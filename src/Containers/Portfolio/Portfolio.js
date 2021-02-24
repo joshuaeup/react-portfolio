@@ -12,11 +12,14 @@ const Portfolio = () => {
     const [toggleClass, setToggleClass] = useState("");
     const [projects] = useState(ProjectsData);
 
-    // Updates loading state to false after 6 seconds
     useEffect(() => {
-        setTimeout(() => setLoading(false), 2000);
-    });
+        startLoading(setLoading);
+    }, []);
 
+    const startLoading = (loadSetter) => {
+        // Updates loading state to false after 6 seconds
+        setTimeout(() => loadSetter(false), 2000);
+    };
     // Method to find product using param
     const findProject = (id) => {
         // Find element with matching title
@@ -66,6 +69,8 @@ const Portfolio = () => {
                                         toggleClass={toggleClass}
                                         toggleHandler={toggleHandler}
                                         data={projects}
+                                        startLoading={startLoading}
+                                        loadSetter={setLoading}
                                     />
                                 )}
                             />

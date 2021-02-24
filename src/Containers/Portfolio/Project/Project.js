@@ -3,6 +3,8 @@ import Banner from "../../../Components/Banner/Banner";
 import Footer from "../../../Components/Footer/Footer";
 import { Link } from "react-router-dom";
 import Pdf from "../../../assets/Resume.pdf";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const Projects = (props) => {
     // const [loading, setLoading] = useState(true);
@@ -10,6 +12,11 @@ const Projects = (props) => {
         window.scrollTo(0, 0);
     });
 
+    useEffect(() => {
+        AOS.init({
+            duration: 2000,
+        });
+    }, []);
     return (
         <>
             {/* {loading === false ? (
@@ -34,42 +41,6 @@ const Projects = (props) => {
                                     </span>
                                 </li>
                             </Link>
-                            {/* <Link
-                                to="profile-scroll"
-                                spy={true}
-                                smooth={true}
-                                offset={-70}
-                                onClick={props.toggleHandler}
-                            >
-                                <li className="Navigation-item">
-                                    <i className="fas fa-user-circle"></i>{" "}
-                                    <span>Profile</span>
-                                </li>
-                            </Link>
-                            <Link
-                                to="projects-scroll"
-                                spy={true}
-                                smooth={true}
-                                offset={-60}
-                                onClick={props.toggleHandler}
-                            >
-                                <li className="Navigation-item">
-                                    <i className="fas fa-laptop"></i>{" "}
-                                    <span>Projects</span>
-                                </li>
-                            </Link>
-                            <Link
-                                to="contact-scroll"
-                                spy={true}
-                                smooth={true}
-                                offset={-70}
-                                onClick={props.toggleHandler}
-                            >
-                                <li className="Navigation-item">
-                                    <i className="fas fa-envelope-open-text"></i>{" "}
-                                    <span>Contact</span>
-                                </li>
-                            </Link> */}
                             <a
                                 href={Pdf}
                                 target="_blank"
@@ -88,7 +59,10 @@ const Projects = (props) => {
                     <Banner title="Projects" />
                     <div id="profile-container">
                         <div className="two-column-grid">
-                            <div className="two-column-grid__column">
+                            <div
+                                className="two-column-grid__column"
+                                data-aos="fade-right"
+                            >
                                 <h2 className="two-column-grid__column__title">
                                     {props.data.title}
                                 </h2>
@@ -136,7 +110,10 @@ const Projects = (props) => {
                                     )}
                                 </div>
                             </div>
-                            <div className="two-column-grid__column">
+                            <div
+                                className="two-column-grid__column"
+                                data-aos="fade-left"
+                            >
                                 <div className="two-column-grid__column__img__container">
                                     <img
                                         className="two-column-grid__column__img"
@@ -166,7 +143,12 @@ const Projects = (props) => {
                             />
 
                             {props.data.expanded.background !== undefined && (
-                                <div className="product-page-container__body__container">
+                                <div
+                                    className="product-page-container__body__container"
+                                    data-aos="fade-up"
+                                    data-aos-anchor-placement="center-bottom"
+                                    data-aos-duration="2500"
+                                >
                                     <h1 className="product-page-container__title">
                                         Background
                                     </h1>
@@ -183,9 +165,17 @@ const Projects = (props) => {
                                     className="product-page-img-wide"
                                     alt="Project"
                                     src={props.data.expanded.images[1]}
+                                    data-aos="fade-up"
+                                    data-aos-anchor-placement="center-bottom"
+                                    data-aos-duration="2500"
                                 />
 
-                                <div className="product-page-container__body__container">
+                                <div
+                                    className="product-page-container__body__container"
+                                    data-aos="fade-up"
+                                    data-aos-anchor-placement="center-bottom"
+                                    data-aos-duration="2500"
+                                >
                                     <h1 className="product-page-container__title">
                                         {props.data.expanded.column1Title}
                                     </h1>
@@ -198,7 +188,12 @@ const Projects = (props) => {
 
                         {props.data.expanded.images[2] !== undefined && (
                             <div className="product-page-container">
-                                <div className="product-page-container__body__container">
+                                <div
+                                    className="product-page-container__body__container"
+                                    data-aos="fade-up"
+                                    data-aos-anchor-placement="center-bottom"
+                                    data-aos-duration="2500"
+                                >
                                     <h1 className="product-page-container__title">
                                         {props.data.expanded.column2Title}
                                     </h1>
@@ -210,6 +205,9 @@ const Projects = (props) => {
                                     className="product-page-img-wide"
                                     alt="Project"
                                     src={props.data.expanded.images[2]}
+                                    data-aos="fade-up"
+                                    data-aos-anchor-placement="center-bottom"
+                                    data-aos-duration="2500"
                                 />
                             </div>
                         )}
