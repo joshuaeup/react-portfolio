@@ -76,6 +76,10 @@ $colors: (
             height: auto;
             width: 100%;
 
+            .two-column-grid__column__subtitle {
+                font-weight: 500;
+            }
+
             .two-column-grid__column__body {
                 font-size: 1.2rem;
             }
@@ -447,6 +451,7 @@ $colors: (
             .text__wrapper {
                 border-radius: 12px;
                 font-size: 1.1rem;
+                font-weight: 400;
                 background-color: white;
                 color: black;
             }
@@ -719,6 +724,9 @@ $colors: (
             grid-gap: 3rem;
             padding: 2rem 4rem;
             .portfolio-column-grid__column {
+                position: relative;
+                top: 0;
+                left: 0;
                 border: solid 1px white;
                 padding: 0.8rem;
                 background-color: #fffefe;
@@ -733,10 +741,58 @@ $colors: (
 
                 .portfolio-column-grid__column__info {
                     .portfolio-column-grid__column__info__title {
+                        font-weight: 400;
                     }
                     .portfolio-column-grid__column__info__text {
                     }
                 }
+                .portfolio-column-grid__overlay {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    height: 100%;
+                    width: 100%;
+                    background: rgba(0, 0, 0, 0.13);
+                    opacity: 0;
+                    transition: all 1s;
+
+                    .portfolio-column-grid__overlay__btn {
+                        position: absolute;
+                        top: 40%;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        background-color: #0870ca;
+                        padding: 0.7rem 1rem;
+                        border: solid 1px #ced4da3b;
+                        border-radius: 5px;
+                        width: 50%;
+                        justify-self: center;
+                        color: white;
+                        font-size: 1rem;
+                        transition: all 0.3s;
+                        cursor: pointer;
+                    }
+                    .portfolio-column-grid__overlay__btn:hover {
+                        background-color: lighten(#0870ca, 10px);
+                    }
+                }
+
+                .portfolio-column-grid__overlay:hover {
+                    opacity: 1;
+                }
+            }
+
+            .portfolio-column-grid__overlay {
+                position: absolute;
+                top: 0;
+                left: 0;
+                background: red;
+                display: block;
+                // height: 100%;
+                // width: 100%;
+            }
+            :hover .portfolio-column-grid__overlay {
+                display: block;
             }
         }
     }

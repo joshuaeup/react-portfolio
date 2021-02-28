@@ -6,13 +6,17 @@
 
 * {
     box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
 }
 
 html,
 body {
     margin: 0;
     padding: 0;
-    font-family: "Roboto", sans-serif;
+}
+
+.accent {
+    color: #e46338;
 }
 
 #Main {

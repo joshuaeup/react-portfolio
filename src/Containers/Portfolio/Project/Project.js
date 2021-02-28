@@ -63,7 +63,7 @@ const Projects = (props) => {
                                 className="two-column-grid__column"
                                 data-aos="fade-right"
                             >
-                                <h2 className="two-column-grid__column__title">
+                                <h2 className="two-column-grid__column__title accent">
                                     {props.data.title}
                                 </h2>
                                 <hr
@@ -127,7 +127,7 @@ const Projects = (props) => {
                     <div id="product-page-container-grid">
                         <div className="product-page-container">
                             <h2
-                                className="two-column-grid__column__title"
+                                className="two-column-grid__column__title accent"
                                 style={{
                                     marginTop: "2rem",
                                     marginBottom: "2rem",
@@ -149,7 +149,7 @@ const Projects = (props) => {
                                     data-aos-anchor-placement="center-bottom"
                                     data-aos-duration="2500"
                                 >
-                                    <h1 className="product-page-container__title">
+                                    <h1 className="product-page-container__title accent">
                                         Background
                                     </h1>
                                     <p className="product-page-container__text">
@@ -176,7 +176,7 @@ const Projects = (props) => {
                                     data-aos-anchor-placement="center-bottom"
                                     data-aos-duration="2500"
                                 >
-                                    <h1 className="product-page-container__title">
+                                    <h1 className="product-page-container__title accent">
                                         {props.data.expanded.column1Title}
                                     </h1>
                                     <p className="product-page-container__text">
@@ -194,7 +194,7 @@ const Projects = (props) => {
                                     data-aos-anchor-placement="center-bottom"
                                     data-aos-duration="2500"
                                 >
-                                    <h1 className="product-page-container__title">
+                                    <h1 className="product-page-container__title accent">
                                         {props.data.expanded.column2Title}
                                     </h1>
                                     <p className="product-page-container__text">
@@ -213,7 +213,7 @@ const Projects = (props) => {
                         )}
 
                         <h2
-                            className="two-column-grid__column__title"
+                            className="two-column-grid__column__title accent"
                             style={{
                                 marginTop: "2rem",
                                 marginBottom: "2rem",
@@ -228,7 +228,7 @@ const Projects = (props) => {
                         >
                             {props.data.expanded.frontend !== "" && (
                                 <div className="product-page-container__body__container__grid">
-                                    <h1 className="product-page-container__title">
+                                    <h1 className="product-page-container__title accent">
                                         Frontend
                                     </h1>
                                     <p className="product-page-container__text">
@@ -238,7 +238,7 @@ const Projects = (props) => {
                             )}
                             {props.data.expanded.backend !== "" && (
                                 <div className="product-page-container__body__container__grid">
-                                    <h1 className="product-page-container__title">
+                                    <h1 className="product-page-container__title accent">
                                         Backend
                                     </h1>
                                     <p className="product-page-container__text">

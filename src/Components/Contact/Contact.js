@@ -30,7 +30,9 @@ const Contact = () => {
 
     return (
         <main id="padded-main" style={{ padding: "2rem 0" }}>
-            <h2 className="two-column-grid__column__title">Contact Me</h2>
+            <h2 className="two-column-grid__column__title accent">
+                Contact Me
+            </h2>
             <div className="two-grid-container">
                 <div className="contact-column">
                     <div className="contact-column__link__container">
@@ -81,7 +83,10 @@ const Contact = () => {
                                 method="POST"
                                 encType="type/html"
                             >
-                                <div className="input-container">
+                                <div
+                                    className="input-container"
+                                    style={{ paddingTop: "1rem" }}
+                                >
                                     <label
                                         className="input-container__label"
                                         htmlFor="fname"
@@ -174,7 +179,10 @@ const Contact = () => {
                                 method="POST"
                                 encType="type/html"
                             >
-                                <div className="input-container">
+                                <div
+                                    className="input-container"
+                                    style={{ paddingTop: "1rem" }}
+                                >
                                     <label
                                         className="input-container__label"
                                         htmlFor="fname"

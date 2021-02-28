@@ -116,6 +116,9 @@
   height: auto;
   width: 100%;
 }
+#profile-container .two-column-grid .two-column-grid__column .two-column-grid__column__subtitle {
+  font-weight: 500;
+}
 #profile-container .two-column-grid .two-column-grid__column .two-column-grid__column__body {
   font-size: 1.2rem;
 }
@@ -429,6 +432,7 @@
 .contact-column .contact-column__link__container .contact-column__link .text__wrapper {
   border-radius: 12px;
   font-size: 1.1rem;
+  font-weight: 400;
   background-color: white;
   color: black;
 }
@@ -658,6 +662,9 @@
     padding: 2rem 4rem;
   }
   #projects-container .portfolio-column-grid .portfolio-column-grid__column {
+    position: relative;
+    top: 0;
+    left: 0;
     border: solid 1px white;
     padding: 0.8rem;
     background-color: #fffefe;
@@ -667,6 +674,52 @@
     height: 100%;
     width: 100%;
   }
+  #projects-container .portfolio-column-grid .portfolio-column-grid__column .portfolio-column-grid__column__info .portfolio-column-grid__column__info__title {
+    font-weight: 400;
+  }
+  #projects-container .portfolio-column-grid .portfolio-column-grid__column .portfolio-column-grid__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.13);
+    opacity: 0;
+    transition: all 1s;
+  }
+  #projects-container .portfolio-column-grid .portfolio-column-grid__column .portfolio-column-grid__overlay .portfolio-column-grid__overlay__btn {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #0870ca;
+    padding: 0.7rem 1rem;
+    border: solid 1px #ced4da3b;
+    border-radius: 5px;
+    width: 50%;
+    justify-self: center;
+    color: white;
+    font-size: 1rem;
+    transition: all 0.3s;
+    cursor: pointer;
+  }
+  #projects-container .portfolio-column-grid .portfolio-column-grid__column .portfolio-column-grid__overlay .portfolio-column-grid__overlay__btn:hover {
+    background-color: #0f8bf6;
+  }
+  #projects-container .portfolio-column-grid .portfolio-column-grid__column .portfolio-column-grid__overlay:hover {
+    opacity: 1;
+  }
+  #projects-container .portfolio-column-grid .portfolio-column-grid__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: red;
+    display: block;
+  }
+  #projects-container .portfolio-column-grid :hover .portfolio-column-grid__overlay {
+    display: block;
+  }
+
   #skills-container__outer .skills-container {
     display: grid;
     padding: 2rem;
@@ -923,13 +976,17 @@
 }
 * {
   box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
 }
 
 html,
 body {
   margin: 0;
   padding: 0;
-  font-family: "Roboto", sans-serif;
+}
+
+.accent {
+  color: #e46338;
 }
 
 #Main {

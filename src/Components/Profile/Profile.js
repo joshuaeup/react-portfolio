@@ -7,7 +7,7 @@ const Profile = (props) => {
             <div id="profile-container">
                 <div className="two-column-grid">
                     <div className="two-column-grid__column">
-                        <h2 className="two-column-grid__column__title">
+                        <h2 className="two-column-grid__column__title accent">
                             About Me
                         </h2>
                         <h3 className="two-column-grid__column__subtitle">
