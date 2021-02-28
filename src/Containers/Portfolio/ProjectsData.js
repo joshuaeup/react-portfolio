@@ -13,13 +13,13 @@ const ProjectsData = [
                 "I designed The San Francisco Travel Site for the Road To Hire Gateway Apprenticeship. The purpose was to develop a fully interactive/responsive informative site with the use of HTML and CSS only.",
             background:
                 "The San Francisco Travel Site was my first responsive site developed without the addition of any Front-End libraries. This project enabled me to practice programming from the ground up.",
-            frontend: "HTML | CSS | JavaScript",
+            frontend: "HTML | CSS",
             backend: "",
             images: [
                 "https://joshuaeup.github.io/my-port/static/media/gateWayBanner.70a98591.PNG",
             ],
-            repo: "https://github.com/joshuaeup/R2H-Gateway",
-            site: "https://joshuaeup.github.io/R2H-Gateway/",
+            repo: "https://github.com/joshuaeup/Gateway",
+            site: "https://joshuaeup.github.io/Gateway/",
         },
     },
     {
@@ -80,6 +80,24 @@ const ProjectsData = [
     },
     {
         id: 3,
+        title: "Tesla Mock-up",
+        subTitle: "R2H Apprenticeship",
+        expanded: {
+            logo:
+                "https://lh3.googleusercontent.com/pw/ACtC-3che06JlPnoAyxeIU_teTPQtYASduNoNOvRmxlaOn7zsEmuUQsYfpO6z8NvK3QZAR6tZrXi3Zdy8DyFeyDJwnBQHuBB5k5CvesDoB57Kfcr4K0Bzd24sbcyCDkevrVeqcJEgzYYQo3AyXsimfjCG8Am=s512-no?authuser=0",
+            date: "February 2021",
+            text:
+                "The Tesla Mock-up application was created to demonstrate proficient React hooks expertise, as well as implement a new EV calculating feature.",
+            frontend: "HTML | CSS | JavaScript | React",
+            backend: "Express | Node.js | MySQL",
+            images: [
+                "https://lh3.googleusercontent.com/pw/ACtC-3cgQA_aPcBmKpFG1MMR3K0ksSgyBlCWspPNQQ9yrsVjSVvduWEyqJl8LTJIdPj2bVuBMprqJuwsWyyBzoIQ_qYX2Ngmzpm04o7-Hwww1bkqfAM7lIxHaOY58HQ0NYnn3BvgH6bVMdU9Q79rQSOK5jM5=w1901-h961-no?authuser=0",
+            ],
+            repo: "https://github.com/Cfor0/tesla",
+        },
+    },
+    {
+        id: 4,
         title: "Reservation Maker",
         subTitle: "UI/UX Design",
         expanded: {
@@ -97,7 +115,7 @@ const ProjectsData = [
         },
     },
     {
-        id: 4,
+        id: 5,
         title: "Fillerword Counter",
         subTitle: "R2H Apprenticeship",
         expanded: {
@@ -115,7 +133,7 @@ const ProjectsData = [
         },
     },
     {
-        id: 5,
+        id: 6,
         title: "Guessing Game",
         subTitle: "R2H Apprenticeship",
         expanded: {
@@ -133,7 +151,7 @@ const ProjectsData = [
         },
     },
     {
-        id: 6,
+        id: 7,
         title: "Budgety",
         subTitle: "R2H Apprenticeship",
         expanded: {
@@ -151,7 +169,7 @@ const ProjectsData = [
         },
     },
     {
-        id: 7,
+        id: 8,
         title: "Hope Hackathon",
         subTitle: "R2H Apprenticeship",
         expanded: {
@@ -170,7 +188,7 @@ const ProjectsData = [
         },
     },
     {
-        id: 8,
+        id: 9,
         title: "Burger Builder",
         subTitle: "R2H Apprenticeship",
         expanded: {
@@ -188,7 +206,7 @@ const ProjectsData = [
         },
     },
     {
-        id: 9,
+        id: 10,
         title: "Tic Tac Toe",
         subTitle: "R2H Apprenticeship",
         expanded: {
@@ -203,24 +221,6 @@ const ProjectsData = [
             ],
             repo: "https://github.com/joshuaeup/Tic-Tac-Toe",
             site: "https://joshuaeup-tic-tac-toe.netlify.app/",
-        },
-    },
-    {
-        id: 10,
-        title: "Tesla Mock-up",
-        subTitle: "R2H Apprenticeship",
-        expanded: {
-            logo:
-                "https://lh3.googleusercontent.com/pw/ACtC-3che06JlPnoAyxeIU_teTPQtYASduNoNOvRmxlaOn7zsEmuUQsYfpO6z8NvK3QZAR6tZrXi3Zdy8DyFeyDJwnBQHuBB5k5CvesDoB57Kfcr4K0Bzd24sbcyCDkevrVeqcJEgzYYQo3AyXsimfjCG8Am=s512-no?authuser=0",
-            date: "February 2021",
-            text:
-                "The Tesla Mock-up application was created to demonstrate proficient React hooks expertise, as well as implement a new EV calculating feature.",
-            frontend: "HTML | CSS | JavaScript | React",
-            backend: "Express | Node.js | MySQL",
-            images: [
-                "https://lh3.googleusercontent.com/pw/ACtC-3cgQA_aPcBmKpFG1MMR3K0ksSgyBlCWspPNQQ9yrsVjSVvduWEyqJl8LTJIdPj2bVuBMprqJuwsWyyBzoIQ_qYX2Ngmzpm04o7-Hwww1bkqfAM7lIxHaOY58HQ0NYnn3BvgH6bVMdU9Q79rQSOK5jM5=w1901-h961-no?authuser=0",
-            ],
-            repo: "https://github.com/Cfor0/tesla",
         },
     },
 ];

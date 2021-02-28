@@ -3,7 +3,16 @@ import Title from "../Title/Title";
 import { Link } from "react-router-dom";
 import TextInput from "react-autocomplete-input";
 import "react-autocomplete-input/dist/bundle.css";
-const technologies = ["HTML", "CSS", "JavaScript", "React", "SCSS", "EJS"];
+const technologies = [
+    "HTML",
+    "CSS",
+    "JavaScript",
+    "React",
+    "SCSS",
+    "EJS",
+    "MySQL",
+    "SQL",
+];
 const Projects = (props) => {
     // Set state of data
     const [projects, setProjects] = useState(props.data);
