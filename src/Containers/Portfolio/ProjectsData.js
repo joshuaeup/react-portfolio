@@ -1,36 +1,16 @@
 import defaultLogo from "../../assets/images/defaultLogo.png";
 
 const ProjectsData = [
-    // {
-    //     id: 0,
-    //     title: "Portfolio Project",
-    //     subTitle: "Personal Project",
-    //     expanded: {
-    //         logo: "https://cdn.auth0.com/blog/react-js/react.png",
-    //         date: "November 2017",
-    //         text:
-    //             "I designed the first version of my portfolio after completing the UNC Charlotte Coding Bootcamp. The purpose of this portfolio was to display my current coding abilities, while also housing all of the new projects I would develop in the future.",
-    //         background:
-    //             "The Portfolio Mock-One was my first larger scaled project using Javascript Libraries including React.js, and Express.js. This project enabled me to practice linking the Front-End UI design with the Back-End development structure.",
-    //         frontend: "HTML | CSS | JavaScript | React | Bootstrap",
-    //         backend: "JavaScript | Node.js | Express.js | SQL",
-    //         images: [
-    //             "https://joshuaeup.github.io/my-port/static/media/mockOneBanner.d314473a.PNG",
-    //         ],
-    //         // repo: "https://github.com/joshuaeup/react-ecommerce",
-    //         // site: "https://joshuaeup-ecommerce.netlify.app/",
-    //     },
-    // },
     {
         id: 0,
         title: "GateWay",
-        subTitle: "R2H Fellowship",
+        subTitle: "R2H Apprenticeship",
         expanded: {
             logo:
                 "https://www.pinclipart.com/picdir/big/20-205603_image-of-bridges-clipart-0-golden-gate-bridge.png",
             date: "November 2017",
             text:
-                "I designed The San Francisco Travel Site for the Road To Hire Gateway Fellowship. The purpose was to develop a fully interactive/responsive informative site with the use of HTML and CSS only.",
+                "I designed The San Francisco Travel Site for the Road To Hire Gateway Apprenticeship. The purpose was to develop a fully interactive/responsive informative site with the use of HTML and CSS only.",
             background:
                 "The San Francisco Travel Site was my first responsive site developed without the addition of any Front-End libraries. This project enabled me to practice programming from the ground up.",
             frontend: "HTML | CSS | JavaScript",
@@ -39,36 +19,13 @@ const ProjectsData = [
                 "https://joshuaeup.github.io/my-port/static/media/gateWayBanner.70a98591.PNG",
             ],
             repo: "https://github.com/joshuaeup/R2H-Gateway",
+            site: "https://joshuaeup.github.io/R2H-Gateway/",
         },
     },
-    // {
-    //     id: 2,
-    //     title: "Valerie Web",
-    //     subTitle: "Personal Project",
-    //     expanded: {
-    //         logo:
-    //             "https://joshuaeup.github.io/my-port/static/media/valWebLogo.562f208a.PNG",
-    //         date: "June 2019",
-    //         text:
-    //             "I designed Valweb as a single page Realestate website for a local realtor. The recipient was looking for an interactive design that would serve to showcase her biography, while also implementing all the different forms of contacting her.",
-    //         background:
-    //             "The technologies I used to program Valweb were React for my Front-End framework and Express.js for my server-side rendering. My reasoning for choosing React was to allow constant state updates.",
-    //         frontend: "HTML | CSS | JavaScript | React | Bootstrap",
-    //         backend: "JavaScript | Node.js | Express.js",
-    //         images: [
-    //             "https://joshuaeup.github.io/my-port/static/media/valWebBanner.977984dc.PNG",
-    //             "https://joshuaeup.github.io/my-port/static/media/valWebSub3.93488872.PNG",
-    //             "https://joshuaeup.github.io/my-port/static/media/valWebSubBottom.ad44f0b0.PNG",
-    //         ],
-    //         repo: "https://github.com/joshuaeup/react-ecommerce",
-    //         site: "https://joshuaeup-ecommerce.netlify.app/",
-    //     },
-    // },
-
     {
         id: 1,
         title: "Baked and Bubbly",
-        subTitle: "R2H Fellowship",
+        subTitle: "R2H Apprenticeship",
         expanded: {
             logo:
                 "https://lh3.googleusercontent.com/TUz9q4LmaGOfW209ugbUXIlkVmASE-gGs4Oq0aE7via1h7fsmM05R0JpJiJZK2Pwkuy4wYwvEjZpn_9f_ZC3RxhTniuFvHkAnk6G2gw2iNlNr2We6Nrs3Vi6GZd6IGJ7H2hBAzpAS9L4aNe6TmTRKKtRmewNIhSttRJ0MoYnaB4g_FSzyjcWYZ3OR2KQp2CIOvH8eBIZXznf263DUFrZIThBVVuI72vvv0jNWSynDLyEvYAFvpii2tWJhHOoo6rfYnD0C1HTt0hCQcAoVc2W9QhpqKs0enX5emuVx12_QOpHEx2LJwYLyzlYFhVVE-PFS2ACMQtdqAoEcwctakY-Z061Tnr8pyWImjhG8ZPa5pYtQjMOJYkZ1C3n3hAN8nYoPthqoVRl3O9PMhj2aXpfhiMRM1sI-IS_bT5k2BIIolsy3Xf2U2TYn7HtwdyQL_scBFNddWOhixHGShcz-vT14W3q5VecSPyKSh0U7ev4WUbUGkY_SwbzV98IZwQrjR0GmwPLsaynNUPSuv3HWNbBsSuvrQxaMtL_nuUG8jhH8QAJ95YcNSCx8GWutWxfUcpODVS-7UU1uCaj2MiR7QQvZ195s0wIg_uLHCba1zXt5hWzQnx780pKN4uQtZ9fOB_q8jy5pbjnLbIZtSHVuzJn0mEdyjUV1O7wmimYOJt7lUR0CWdJqgfObciwBVfI44o=w375-h500-no?authuser=4",
@@ -95,7 +52,7 @@ const ProjectsData = [
     {
         id: 2,
         title: "Quarantips",
-        subTitle: "R2H Fellowship",
+        subTitle: "R2H Apprenticeship",
         expanded: {
             logo:
                 "https://lh3.googleusercontent.com/pw/ACtC-3c7TrV_jpZOU5hBh2B1c3mT3rzav6ANlozxHKGfUUXneEHx5gDXf25Ded01GCGOxjsw_5RQb0dD-26XuymP2V_BO4oOn-kG5ZxS6aEr3Fge7vt14Xndh4y_kqOLx74wdYLLNuea1XA1DWQS2za_tv2O=s640-no?authuser=0",
@@ -142,7 +99,7 @@ const ProjectsData = [
     {
         id: 4,
         title: "Fillerword Counter",
-        subTitle: "R2H Fellowship",
+        subTitle: "R2H Apprenticeship",
         expanded: {
             logo: defaultLogo,
             date: "November 2020",
@@ -160,7 +117,7 @@ const ProjectsData = [
     {
         id: 5,
         title: "Guessing Game",
-        subTitle: "R2H Fellowship",
+        subTitle: "R2H Apprenticeship",
         expanded: {
             logo: defaultLogo,
             date: "November 2020",
@@ -178,7 +135,7 @@ const ProjectsData = [
     {
         id: 6,
         title: "Budgety",
-        subTitle: "R2H Fellowship",
+        subTitle: "R2H Apprenticeship",
         expanded: {
             logo: defaultLogo,
             date: "November 2020",
@@ -196,7 +153,7 @@ const ProjectsData = [
     {
         id: 7,
         title: "Hope Hackathon",
-        subTitle: "R2H Fellowship",
+        subTitle: "R2H Apprenticeship",
         expanded: {
             logo: defaultLogo,
             date: "October 2020",
@@ -215,7 +172,7 @@ const ProjectsData = [
     {
         id: 8,
         title: "Burger Builder",
-        subTitle: "R2H Fellowship",
+        subTitle: "R2H Apprenticeship",
         expanded: {
             logo: defaultLogo,
             date: "October 2020",
@@ -233,7 +190,7 @@ const ProjectsData = [
     {
         id: 9,
         title: "Tic Tac Toe",
-        subTitle: "R2H Fellowship",
+        subTitle: "R2H Apprenticeship",
         expanded: {
             logo: defaultLogo,
             date: "January 2021",
@@ -246,6 +203,24 @@ const ProjectsData = [
             ],
             repo: "https://github.com/joshuaeup/Tic-Tac-Toe",
             site: "https://joshuaeup-tic-tac-toe.netlify.app/",
+        },
+    },
+    {
+        id: 10,
+        title: "Tesla Mock-up",
+        subTitle: "R2H Apprenticeship",
+        expanded: {
+            logo:
+                "https://lh3.googleusercontent.com/pw/ACtC-3che06JlPnoAyxeIU_teTPQtYASduNoNOvRmxlaOn7zsEmuUQsYfpO6z8NvK3QZAR6tZrXi3Zdy8DyFeyDJwnBQHuBB5k5CvesDoB57Kfcr4K0Bzd24sbcyCDkevrVeqcJEgzYYQo3AyXsimfjCG8Am=s512-no?authuser=0",
+            date: "February 2021",
+            text:
+                "The Tesla Mock-up application was created to demonstrate proficient React hooks expertise, as well as implement a new EV calculating feature.",
+            frontend: "HTML | CSS | JavaScript | React",
+            backend: "Express | Node.js | MySQL",
+            images: [
+                "https://lh3.googleusercontent.com/pw/ACtC-3cgQA_aPcBmKpFG1MMR3K0ksSgyBlCWspPNQQ9yrsVjSVvduWEyqJl8LTJIdPj2bVuBMprqJuwsWyyBzoIQ_qYX2Ngmzpm04o7-Hwww1bkqfAM7lIxHaOY58HQ0NYnn3BvgH6bVMdU9Q79rQSOK5jM5=w1901-h961-no?authuser=0",
+            ],
+            repo: "https://github.com/Cfor0/tesla",
         },
     },
 ];
