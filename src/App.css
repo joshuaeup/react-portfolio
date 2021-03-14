@@ -97,7 +97,7 @@
   transition: all 0.8s;
 }
 #body-two-column-grid aside #Aside-banner #Aside-banner__img {
-  width: 15vw;
+  width: 25vw;
 }
 #body-two-column-grid .change {
   left: 0;
@@ -614,7 +614,7 @@
     transform: translateX(0);
   }
   #body-two-column-grid aside #Aside-banner #Aside-banner__img {
-    width: 5vw;
+    width: 5.5vw;
   }
 
   .six-column-grid {
