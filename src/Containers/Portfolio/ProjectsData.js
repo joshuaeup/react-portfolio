@@ -80,20 +80,21 @@ const ProjectsData = [
     },
     {
         id: 3,
-        title: "Tesla Mock-up",
+        title: "Tesla Redesign",
         subTitle: "R2H Apprenticeship",
         expanded: {
             logo:
                 "https://lh3.googleusercontent.com/pw/ACtC-3che06JlPnoAyxeIU_teTPQtYASduNoNOvRmxlaOn7zsEmuUQsYfpO6z8NvK3QZAR6tZrXi3Zdy8DyFeyDJwnBQHuBB5k5CvesDoB57Kfcr4K0Bzd24sbcyCDkevrVeqcJEgzYYQo3AyXsimfjCG8Am=s512-no?authuser=0",
             date: "February 2021",
             text:
-                "The Tesla Mock-up application was created to demonstrate proficient React hooks expertise, as well as implement a new EV calculating feature.",
+                "The Tesla Redesign application was created to demonstrate proficient React hooks expertise, as well as implement a new EV calculating feature.",
             frontend: "HTML | CSS | JavaScript | React",
             backend: "Express | Node.js | MySQL",
             images: [
                 "https://lh3.googleusercontent.com/pw/ACtC-3cgQA_aPcBmKpFG1MMR3K0ksSgyBlCWspPNQQ9yrsVjSVvduWEyqJl8LTJIdPj2bVuBMprqJuwsWyyBzoIQ_qYX2Ngmzpm04o7-Hwww1bkqfAM7lIxHaOY58HQ0NYnn3BvgH6bVMdU9Q79rQSOK5jM5=w1901-h961-no?authuser=0",
             ],
             repo: "https://github.com/Cfor0/tesla",
+            site: "https://tesla-redesign-c8.netlify.app/",
         },
     },
     {
